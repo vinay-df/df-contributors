@@ -500,3 +500,634 @@
 2024-11-19 18:32:01,708 - linkedin_publisher_service.py - Line: 74 - INFO - Attempting to post image for user JqmOgR5UUi
 2024-11-19 18:32:02,610 - linkedin_publisher_service.py - Line: 121 - ERROR - Request failed during image post for user JqmOgR5UUi: 403 Client Error: Forbidden for url: https://api.linkedin.com/v2/ugcPosts
 2024-11-19 18:32:02,610 - linkedin_test.py - Line: 70 - ERROR - An error occurred: Failed to post image on LinkedIn: 403 Client Error: Forbidden for url: https://api.linkedin.com/v2/ugcPosts
+2024-11-19 22:02:30,234 - linkedin_oauth_helper.py - Line: 19 - INFO - LinkedInOAuthHelper initialized
+2024-11-19 22:02:30,242 - linkedin_test.py - Line: 29 - INFO - Step 1: Authenticating user...
+2024-11-19 22:02:30,244 - linkedin_oauth_helper.py - Line: 114 - INFO - Step 1: Generating authorization URL
+2024-11-19 22:02:30,248 - linkedin_oauth_helper.py - Line: 25 - INFO - Authorization URL: https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=86wvn8r9qqrpwx&redirect_uri=https://www.reddit.com/&scope=w_member_social%20profile%20email%20openid
+2024-11-19 22:04:26,421 - linkedin_oauth_helper.py - Line: 19 - INFO - LinkedInOAuthHelper initialized
+2024-11-19 22:04:26,421 - linkedin_test.py - Line: 29 - INFO - Step 1: Authenticating user...
+2024-11-19 22:04:26,422 - linkedin_oauth_helper.py - Line: 114 - INFO - Step 1: Generating authorization URL
+2024-11-19 22:04:26,422 - linkedin_oauth_helper.py - Line: 25 - INFO - Authorization URL: https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=86wvn8r9qqrpwx&redirect_uri=https://www.reddit.com/&scope=w_member_social%20profile%20email%20openid
+2024-11-19 22:05:25,845 - linkedin_oauth_helper.py - Line: 122 - INFO - Step 2: Exchanging code for token
+2024-11-19 22:05:25,846 - linkedin_oauth_helper.py - Line: 38 - INFO - Exchanging authorization code for token
+2024-11-19 22:05:26,490 - linkedin_oauth_helper.py - Line: 44 - INFO - Token exchange successful
+2024-11-19 22:05:27,045 - linkedin_oauth_helper.py - Line: 51 - INFO - Token saved for user YOUR_TEST_USER_ID
+2024-11-19 22:05:27,046 - linkedin_oauth_helper.py - Line: 127 - INFO - Authentication flow completed for user: YOUR_TEST_USER_ID
+2024-11-19 22:05:27,062 - linkedin_test.py - Line: 36 - INFO - Step 2: Testing text post...
+2024-11-19 22:05:27,173 - linkedin_oauth_helper.py - Line: 58 - INFO - Retrieved token for user YOUR_TEST_USER_ID
+2024-11-19 22:05:27,479 - linkedin_oauth_helper.py - Line: 100 - INFO - User URN: JqmOgR5UUi
+2024-11-19 22:05:27,480 - linkedin_publisher_service.py - Line: 32 - INFO - Attempting to post text for user JqmOgR5UUi
+2024-11-19 22:05:27,827 - linkedin_publisher_service.py - Line: 59 - INFO - Text post successful for user JqmOgR5UUi
+2024-11-19 22:05:27,828 - linkedin_test.py - Line: 38 - INFO - Text Post Response: {'id': 'urn:li:share:7264881513186373632'}
+2024-11-22 17:45:18,733 - linkedin_oauth_helper.py - Line: 19 - INFO - LinkedInOAuthHelper initialized
+2024-11-22 17:45:18,741 - linkedin_test.py - Line: 29 - INFO - Step 1: Authenticating user...
+2024-11-22 17:45:18,742 - linkedin_oauth_helper.py - Line: 114 - INFO - Step 1: Generating authorization URL
+2024-11-22 17:45:18,742 - linkedin_oauth_helper.py - Line: 25 - INFO - Authorization URL: https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=86wvn8r9qqrpwx&redirect_uri=https://www.reddit.com/&scope=w_member_social%20profile%20email%20openid
+2024-11-22 17:48:48,705 - linkedin_oauth_helper.py - Line: 122 - INFO - Step 2: Exchanging code for token
+2024-11-22 17:48:48,705 - linkedin_oauth_helper.py - Line: 38 - INFO - Exchanging authorization code for token
+2024-11-22 17:48:49,179 - linkedin_oauth_helper.py - Line: 44 - INFO - Token exchange successful
+2024-11-22 17:48:49,636 - linkedin_oauth_helper.py - Line: 51 - INFO - Token saved for user YOUR_TEST_USER_ID
+2024-11-22 17:48:49,637 - linkedin_oauth_helper.py - Line: 127 - INFO - Authentication flow completed for user: YOUR_TEST_USER_ID
+2024-11-22 17:48:49,638 - linkedin_test.py - Line: 70 - ERROR - An error occurred: __init__() missing 1 required positional argument: 'oauth_helper'
+2024-11-22 17:49:11,724 - linkedin_oauth_helper.py - Line: 19 - INFO - LinkedInOAuthHelper initialized
+2024-11-22 17:49:11,725 - linkedin_test.py - Line: 29 - INFO - Step 1: Authenticating user...
+2024-11-22 17:49:11,726 - linkedin_oauth_helper.py - Line: 114 - INFO - Step 1: Generating authorization URL
+2024-11-22 17:49:11,727 - linkedin_oauth_helper.py - Line: 25 - INFO - Authorization URL: https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=86wvn8r9qqrpwx&redirect_uri=https://www.reddit.com/&scope=w_member_social%20profile%20email%20openid
+2024-11-22 17:49:22,831 - linkedin_oauth_helper.py - Line: 122 - INFO - Step 2: Exchanging code for token
+2024-11-22 17:49:22,831 - linkedin_oauth_helper.py - Line: 38 - INFO - Exchanging authorization code for token
+2024-11-22 17:49:23,100 - linkedin_oauth_helper.py - Line: 44 - INFO - Token exchange successful
+2024-11-22 17:49:23,341 - linkedin_oauth_helper.py - Line: 51 - INFO - Token saved for user YOUR_TEST_USER_ID
+2024-11-22 17:49:23,341 - linkedin_oauth_helper.py - Line: 127 - INFO - Authentication flow completed for user: YOUR_TEST_USER_ID
+2024-11-22 17:49:23,355 - linkedin_test.py - Line: 45 - INFO - Step 3: Testing image post...
+2024-11-22 17:49:23,497 - linkedin_oauth_helper.py - Line: 58 - INFO - Retrieved token for user YOUR_TEST_USER_ID
+2024-11-22 17:49:23,764 - linkedin_oauth_helper.py - Line: 100 - INFO - User URN: JqmOgR5UUi
+2024-11-22 17:49:23,765 - linkedin_publisher_service.py - Line: 74 - INFO - Attempting to post image for user JqmOgR5UUi
+2024-11-22 17:49:24,618 - linkedin_publisher_service.py - Line: 120 - ERROR - Request failed during image post for user JqmOgR5UUi: 403 Client Error: Forbidden for url: https://api.linkedin.com/v2/ugcPosts
+2024-11-22 17:49:24,619 - linkedin_test.py - Line: 70 - ERROR - An error occurred: Failed to post image on LinkedIn: 403 Client Error: Forbidden for url: https://api.linkedin.com/v2/ugcPosts
+2024-11-22 18:00:04,951 - linkedin_oauth_helper.py - Line: 19 - INFO - LinkedInOAuthHelper initialized
+2024-11-22 18:00:04,972 - linkedin_test.py - Line: 29 - INFO - Step 1: Authenticating user...
+2024-11-22 18:00:04,972 - linkedin_oauth_helper.py - Line: 114 - INFO - Step 1: Generating authorization URL
+2024-11-22 18:00:04,972 - linkedin_oauth_helper.py - Line: 25 - INFO - Authorization URL: https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=86wvn8r9qqrpwx&redirect_uri=https://www.reddit.com/&scope=w_member_social%20profile%20email%20openid
+2024-11-22 18:00:26,113 - linkedin_oauth_helper.py - Line: 122 - INFO - Step 2: Exchanging code for token
+2024-11-22 18:00:26,114 - linkedin_oauth_helper.py - Line: 38 - INFO - Exchanging authorization code for token
+2024-11-22 18:00:26,680 - linkedin_oauth_helper.py - Line: 44 - INFO - Token exchange successful
+2024-11-22 18:00:27,053 - linkedin_oauth_helper.py - Line: 51 - INFO - Token saved for user YOUR_TEST_USER_ID
+2024-11-22 18:00:27,053 - linkedin_oauth_helper.py - Line: 127 - INFO - Authentication flow completed for user: YOUR_TEST_USER_ID
+2024-11-22 18:00:27,054 - linkedin_test.py - Line: 45 - INFO - Step 3: Testing image post...
+2024-11-22 18:00:27,213 - linkedin_oauth_helper.py - Line: 58 - INFO - Retrieved token for user YOUR_TEST_USER_ID
+2024-11-22 18:00:27,476 - linkedin_oauth_helper.py - Line: 100 - INFO - User URN: JqmOgR5UUi
+2024-11-22 18:00:27,477 - linkedin_publisher_service.py - Line: 67 - INFO - Attempting to post image for user JqmOgR5UUi
+2024-11-22 18:00:28,263 - linkedin_publisher_service.py - Line: 97 - INFO - Image uploaded successfully for user JqmOgR5UUi
+2024-11-22 18:00:28,671 - linkedin_publisher_service.py - Line: 116 - INFO - Image post successful for user JqmOgR5UUi
+2024-11-22 18:00:28,672 - linkedin_test.py - Line: 47 - INFO - Image Post Response: {'id': 'urn:li:share:7265907024691961856'}
+2024-11-24 21:04:33,023 - linkedin_oauth_helper.py - Line: 19 - INFO - LinkedInOAuthHelper initialized
+2024-11-24 21:04:33,024 - linkedin_test.py - Line: 29 - INFO - Step 1: Authenticating user...
+2024-11-24 21:04:33,025 - linkedin_oauth_helper.py - Line: 114 - INFO - Step 1: Generating authorization URL
+2024-11-24 21:04:33,026 - linkedin_oauth_helper.py - Line: 25 - INFO - Authorization URL: https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=86wvn8r9qqrpwx&redirect_uri=https://www.reddit.com/&scope=w_member_social%20profile%20email%20openid
+2024-11-24 21:04:57,988 - linkedin_oauth_helper.py - Line: 122 - INFO - Step 2: Exchanging code for token
+2024-11-24 21:04:57,988 - linkedin_oauth_helper.py - Line: 38 - INFO - Exchanging authorization code for token
+2024-11-24 21:04:58,733 - linkedin_oauth_helper.py - Line: 44 - INFO - Token exchange successful
+2024-11-24 21:04:59,311 - linkedin_oauth_helper.py - Line: 51 - INFO - Token saved for user YOUR_TEST_USER_ID
+2024-11-24 21:04:59,312 - linkedin_oauth_helper.py - Line: 127 - INFO - Authentication flow completed for user: YOUR_TEST_USER_ID
+2024-11-24 21:04:59,507 - linkedin_test.py - Line: 54 - INFO - Step 4: Testing video post...
+2024-11-24 21:04:59,612 - linkedin_oauth_helper.py - Line: 58 - INFO - Retrieved token for user YOUR_TEST_USER_ID
+2024-11-24 21:04:59,948 - linkedin_oauth_helper.py - Line: 100 - INFO - User URN: JqmOgR5UUi
+2024-11-24 21:04:59,949 - linkedin_publisher_service.py - Line: 130 - INFO - Attempting to post video for user JqmOgR5UUi
+2024-11-24 21:05:02,777 - linkedin_publisher_service.py - Line: 176 - ERROR - Request failed during video post for user JqmOgR5UUi: 403 Client Error: Forbidden for url: https://api.linkedin.com/v2/ugcPosts
+2024-11-24 21:05:02,778 - linkedin_test.py - Line: 70 - ERROR - An error occurred: Failed to post video on LinkedIn: 403 Client Error: Forbidden for url: https://api.linkedin.com/v2/ugcPosts
+2024-11-24 21:09:12,194 - linkedin_oauth_helper.py - Line: 19 - INFO - LinkedInOAuthHelper initialized
+2024-11-24 21:09:12,195 - linkedin_test.py - Line: 29 - INFO - Step 1: Authenticating user...
+2024-11-24 21:09:12,196 - linkedin_oauth_helper.py - Line: 114 - INFO - Step 1: Generating authorization URL
+2024-11-24 21:09:12,197 - linkedin_oauth_helper.py - Line: 25 - INFO - Authorization URL: https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=86wvn8r9qqrpwx&redirect_uri=https://www.reddit.com/&scope=w_member_social%20profile%20email%20openid
+2024-11-24 21:09:20,643 - linkedin_oauth_helper.py - Line: 122 - INFO - Step 2: Exchanging code for token
+2024-11-24 21:09:20,644 - linkedin_oauth_helper.py - Line: 38 - INFO - Exchanging authorization code for token
+2024-11-24 21:09:21,361 - linkedin_oauth_helper.py - Line: 44 - INFO - Token exchange successful
+2024-11-24 21:09:21,764 - linkedin_oauth_helper.py - Line: 51 - INFO - Token saved for user YOUR_TEST_USER_ID
+2024-11-24 21:09:21,765 - linkedin_oauth_helper.py - Line: 127 - INFO - Authentication flow completed for user: YOUR_TEST_USER_ID
+2024-11-24 21:09:21,767 - linkedin_test.py - Line: 54 - INFO - Step 4: Testing video post...
+2024-11-24 21:09:21,970 - linkedin_oauth_helper.py - Line: 58 - INFO - Retrieved token for user YOUR_TEST_USER_ID
+2024-11-24 21:09:22,324 - linkedin_oauth_helper.py - Line: 100 - INFO - User URN: JqmOgR5UUi
+2024-11-24 21:09:22,325 - linkedin_publisher_service.py - Line: 133 - INFO - Attempting to post video for user JqmOgR5UUi
+2024-11-24 21:09:24,838 - linkedin_publisher_service.py - Line: 171 - INFO - Video upload successful for asset: urn:li:digitalmediaAsset:D5605AQG-utozy1AfUw
+2024-11-24 21:09:25,355 - linkedin_publisher_service.py - Line: 197 - INFO - Video post published successfully for user JqmOgR5UUi
+2024-11-24 21:09:25,356 - linkedin_test.py - Line: 56 - INFO - Video Post Response: {'id': 'urn:li:ugcPost:7266679352031883264'}
+2024-11-24 21:13:42,740 - linkedin_oauth_helper.py - Line: 19 - INFO - LinkedInOAuthHelper initialized
+2024-11-24 21:13:42,741 - linkedin_test.py - Line: 29 - INFO - Step 1: Authenticating user...
+2024-11-24 21:13:42,742 - linkedin_oauth_helper.py - Line: 114 - INFO - Step 1: Generating authorization URL
+2024-11-24 21:13:42,748 - linkedin_oauth_helper.py - Line: 25 - INFO - Authorization URL: https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=86wvn8r9qqrpwx&redirect_uri=https://www.reddit.com/&scope=w_member_social%20profile%20email%20openid
+2024-11-24 21:13:58,357 - linkedin_oauth_helper.py - Line: 122 - INFO - Step 2: Exchanging code for token
+2024-11-24 21:13:58,357 - linkedin_oauth_helper.py - Line: 38 - INFO - Exchanging authorization code for token
+2024-11-24 21:13:58,870 - linkedin_oauth_helper.py - Line: 44 - INFO - Token exchange successful
+2024-11-24 21:13:59,270 - linkedin_oauth_helper.py - Line: 51 - INFO - Token saved for user YOUR_TEST_USER_ID
+2024-11-24 21:13:59,270 - linkedin_oauth_helper.py - Line: 127 - INFO - Authentication flow completed for user: YOUR_TEST_USER_ID
+2024-11-24 21:13:59,272 - linkedin_test.py - Line: 63 - INFO - Step 5: Testing document post...
+2024-11-24 21:13:59,379 - linkedin_oauth_helper.py - Line: 58 - INFO - Retrieved token for user YOUR_TEST_USER_ID
+2024-11-24 21:13:59,866 - linkedin_oauth_helper.py - Line: 100 - INFO - User URN: JqmOgR5UUi
+2024-11-24 21:13:59,868 - linkedin_publisher_service.py - Line: 218 - INFO - Attempting to post document for user JqmOgR5UUi
+2024-11-24 21:14:00,147 - linkedin_publisher_service.py - Line: 289 - ERROR - Request failed during document post for user JqmOgR5UUi: 403 Client Error: Forbidden for url: https://api.linkedin.com/v2/assets?action=registerUpload
+2024-11-24 21:14:00,148 - linkedin_test.py - Line: 70 - ERROR - An error occurred: Failed to post document on LinkedIn: 403 Client Error: Forbidden for url: https://api.linkedin.com/v2/assets?action=registerUpload
+2024-11-24 21:16:30,360 - linkedin_oauth_helper.py - Line: 19 - INFO - LinkedInOAuthHelper initialized
+2024-11-24 21:16:30,361 - linkedin_test.py - Line: 29 - INFO - Step 1: Authenticating user...
+2024-11-24 21:16:30,362 - linkedin_oauth_helper.py - Line: 114 - INFO - Step 1: Generating authorization URL
+2024-11-24 21:16:30,362 - linkedin_oauth_helper.py - Line: 25 - INFO - Authorization URL: https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=86wvn8r9qqrpwx&redirect_uri=https://www.reddit.com/&scope=w_member_social%20profile%20email%20openid
+2024-11-24 21:16:49,174 - linkedin_oauth_helper.py - Line: 122 - INFO - Step 2: Exchanging code for token
+2024-11-24 21:16:49,175 - linkedin_oauth_helper.py - Line: 38 - INFO - Exchanging authorization code for token
+2024-11-24 21:16:49,576 - linkedin_oauth_helper.py - Line: 44 - INFO - Token exchange successful
+2024-11-24 21:16:49,988 - linkedin_oauth_helper.py - Line: 51 - INFO - Token saved for user YOUR_TEST_USER_ID
+2024-11-24 21:16:49,990 - linkedin_oauth_helper.py - Line: 127 - INFO - Authentication flow completed for user: YOUR_TEST_USER_ID
+2024-11-24 21:16:49,992 - linkedin_test.py - Line: 63 - INFO - Step 5: Testing document post...
+2024-11-24 21:16:50,280 - linkedin_oauth_helper.py - Line: 58 - INFO - Retrieved token for user YOUR_TEST_USER_ID
+2024-11-24 21:16:50,549 - linkedin_oauth_helper.py - Line: 100 - INFO - User URN: JqmOgR5UUi
+2024-11-24 21:16:50,550 - linkedin_publisher_service.py - Line: 218 - INFO - Attempting to post document for user JqmOgR5UUi
+2024-11-24 21:16:50,811 - linkedin_publisher_service.py - Line: 296 - ERROR - Request failed during document post for user JqmOgR5UUi: 403 Client Error: Forbidden for url: https://api.linkedin.com/v2/assets?action=registerUpload
+2024-11-24 21:16:50,812 - linkedin_test.py - Line: 70 - ERROR - An error occurred: Failed to post document on LinkedIn: 403 Client Error: Forbidden for url: https://api.linkedin.com/v2/assets?action=registerUpload
+2024-11-24 21:18:32,863 - linkedin_oauth_helper.py - Line: 19 - INFO - LinkedInOAuthHelper initialized
+2024-11-24 21:18:32,864 - linkedin_test.py - Line: 29 - INFO - Step 1: Authenticating user...
+2024-11-24 21:18:32,864 - linkedin_oauth_helper.py - Line: 114 - INFO - Step 1: Generating authorization URL
+2024-11-24 21:18:32,865 - linkedin_oauth_helper.py - Line: 25 - INFO - Authorization URL: https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=86wvn8r9qqrpwx&redirect_uri=https://www.reddit.com/&scope=w_member_social%20profile%20email%20openid
+2024-11-24 21:18:41,399 - linkedin_oauth_helper.py - Line: 122 - INFO - Step 2: Exchanging code for token
+2024-11-24 21:18:41,400 - linkedin_oauth_helper.py - Line: 38 - INFO - Exchanging authorization code for token
+2024-11-24 21:18:41,905 - linkedin_oauth_helper.py - Line: 44 - INFO - Token exchange successful
+2024-11-24 21:18:42,307 - linkedin_oauth_helper.py - Line: 51 - INFO - Token saved for user YOUR_TEST_USER_ID
+2024-11-24 21:18:42,308 - linkedin_oauth_helper.py - Line: 127 - INFO - Authentication flow completed for user: YOUR_TEST_USER_ID
+2024-11-24 21:18:42,309 - linkedin_test.py - Line: 63 - INFO - Step 5: Testing document post...
+2024-11-24 21:18:42,515 - linkedin_oauth_helper.py - Line: 58 - INFO - Retrieved token for user YOUR_TEST_USER_ID
+2024-11-24 21:18:42,927 - linkedin_oauth_helper.py - Line: 100 - INFO - User URN: JqmOgR5UUi
+2024-11-24 21:18:42,928 - linkedin_publisher_service.py - Line: 218 - INFO - Attempting to post document for user JqmOgR5UUi
+2024-11-24 21:18:43,135 - linkedin_publisher_service.py - Line: 296 - ERROR - Request failed during document post for user JqmOgR5UUi: 403 Client Error: Forbidden for url: https://api.linkedin.com/v2/assets?action=registerUpload
+2024-11-24 21:18:43,136 - linkedin_test.py - Line: 70 - ERROR - An error occurred: Failed to post document on LinkedIn: 403 Client Error: Forbidden for url: https://api.linkedin.com/v2/assets?action=registerUpload
+2024-11-24 21:23:00,936 - linkedin_oauth_helper.py - Line: 19 - INFO - LinkedInOAuthHelper initialized
+2024-11-24 21:23:00,937 - linkedin_test.py - Line: 29 - INFO - Step 1: Authenticating user...
+2024-11-24 21:23:00,938 - linkedin_oauth_helper.py - Line: 114 - INFO - Step 1: Generating authorization URL
+2024-11-24 21:23:00,939 - linkedin_oauth_helper.py - Line: 25 - INFO - Authorization URL: https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=86wvn8r9qqrpwx&redirect_uri=https://www.reddit.com/&scope=w_member_social%20profile%20email%20openid
+2024-11-24 21:23:26,339 - linkedin_oauth_helper.py - Line: 122 - INFO - Step 2: Exchanging code for token
+2024-11-24 21:23:26,339 - linkedin_oauth_helper.py - Line: 38 - INFO - Exchanging authorization code for token
+2024-11-24 21:23:26,688 - linkedin_oauth_helper.py - Line: 44 - INFO - Token exchange successful
+2024-11-24 21:23:27,186 - linkedin_oauth_helper.py - Line: 51 - INFO - Token saved for user YOUR_TEST_USER_ID
+2024-11-24 21:23:27,187 - linkedin_oauth_helper.py - Line: 127 - INFO - Authentication flow completed for user: YOUR_TEST_USER_ID
+2024-11-24 21:23:27,189 - linkedin_test.py - Line: 63 - INFO - Step 5: Testing document post...
+2024-11-24 21:23:27,284 - linkedin_oauth_helper.py - Line: 58 - INFO - Retrieved token for user YOUR_TEST_USER_ID
+2024-11-24 21:23:27,603 - linkedin_oauth_helper.py - Line: 100 - INFO - User URN: JqmOgR5UUi
+2024-11-24 21:23:27,604 - linkedin_publisher_service.py - Line: 218 - INFO - Attempting to post document for user JqmOgR5UUi
+2024-11-24 21:23:27,884 - linkedin_publisher_service.py - Line: 242 - ERROR - Document registration failed: {"status":403,"serviceErrorCode":100,"code":"ACCESS_DENIED","message":"Field Value validation failed in REQUEST_BODY: Data Processing Exception while processing fields [/registerUploadRequest/recipes/relationshipType]"}
+2024-11-24 21:23:27,885 - linkedin_publisher_service.py - Line: 305 - ERROR - Unexpected error during document post: Failed to register document for upload
+2024-11-24 21:23:27,886 - linkedin_test.py - Line: 70 - ERROR - An error occurred: Failed to register document for upload
+2024-11-24 21:26:24,847 - linkedin_oauth_helper.py - Line: 19 - INFO - LinkedInOAuthHelper initialized
+2024-11-24 21:26:24,848 - linkedin_test.py - Line: 29 - INFO - Step 1: Authenticating user...
+2024-11-24 21:26:24,848 - linkedin_oauth_helper.py - Line: 114 - INFO - Step 1: Generating authorization URL
+2024-11-24 21:26:24,849 - linkedin_oauth_helper.py - Line: 25 - INFO - Authorization URL: https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=86wvn8r9qqrpwx&redirect_uri=https://www.reddit.com/&scope=w_member_social%20profile%20email%20openid
+2024-11-24 21:26:45,599 - linkedin_oauth_helper.py - Line: 122 - INFO - Step 2: Exchanging code for token
+2024-11-24 21:26:45,600 - linkedin_oauth_helper.py - Line: 38 - INFO - Exchanging authorization code for token
+2024-11-24 21:26:46,050 - linkedin_oauth_helper.py - Line: 44 - INFO - Token exchange successful
+2024-11-24 21:26:46,457 - linkedin_oauth_helper.py - Line: 51 - INFO - Token saved for user YOUR_TEST_USER_ID
+2024-11-24 21:26:46,458 - linkedin_oauth_helper.py - Line: 127 - INFO - Authentication flow completed for user: YOUR_TEST_USER_ID
+2024-11-24 21:26:46,461 - linkedin_test.py - Line: 63 - INFO - Step 5: Testing document post...
+2024-11-24 21:26:46,664 - linkedin_oauth_helper.py - Line: 58 - INFO - Retrieved token for user YOUR_TEST_USER_ID
+2024-11-24 21:26:47,082 - linkedin_oauth_helper.py - Line: 100 - INFO - User URN: JqmOgR5UUi
+2024-11-24 21:26:47,083 - linkedin_publisher_service.py - Line: 218 - INFO - Attempting to post document for user JqmOgR5UUi
+2024-11-24 21:26:47,356 - linkedin_publisher_service.py - Line: 242 - ERROR - Document registration failed: {"status":403,"serviceErrorCode":100,"code":"ACCESS_DENIED","message":"Field Value validation failed in REQUEST_BODY: Data Processing Exception while processing fields [/registerUploadRequest/recipes/relationshipType]"}
+2024-11-24 21:26:47,357 - linkedin_publisher_service.py - Line: 305 - ERROR - Unexpected error during document post: Failed to register document for upload
+2024-11-24 21:26:47,358 - linkedin_test.py - Line: 70 - ERROR - An error occurred: Failed to register document for upload
+2024-11-24 21:33:35,911 - linkedin_oauth_helper.py - Line: 19 - INFO - LinkedInOAuthHelper initialized
+2024-11-24 21:33:35,950 - linkedin_test.py - Line: 29 - INFO - Step 1: Authenticating user...
+2024-11-24 21:33:35,951 - linkedin_oauth_helper.py - Line: 114 - INFO - Step 1: Generating authorization URL
+2024-11-24 21:33:35,952 - linkedin_oauth_helper.py - Line: 25 - INFO - Authorization URL: https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=86wvn8r9qqrpwx&redirect_uri=https://www.reddit.com/&scope=w_member_social%20profile%20email%20openid
+2024-11-24 21:33:45,467 - linkedin_oauth_helper.py - Line: 122 - INFO - Step 2: Exchanging code for token
+2024-11-24 21:33:45,467 - linkedin_oauth_helper.py - Line: 38 - INFO - Exchanging authorization code for token
+2024-11-24 21:33:46,002 - linkedin_oauth_helper.py - Line: 44 - INFO - Token exchange successful
+2024-11-24 21:33:46,609 - linkedin_oauth_helper.py - Line: 51 - INFO - Token saved for user YOUR_TEST_USER_ID
+2024-11-24 21:33:46,610 - linkedin_oauth_helper.py - Line: 127 - INFO - Authentication flow completed for user: YOUR_TEST_USER_ID
+2024-11-24 21:33:46,611 - linkedin_test.py - Line: 63 - INFO - Step 5: Testing document post...
+2024-11-24 21:33:46,815 - linkedin_oauth_helper.py - Line: 58 - INFO - Retrieved token for user YOUR_TEST_USER_ID
+2024-11-24 21:33:47,093 - linkedin_oauth_helper.py - Line: 100 - INFO - User URN: JqmOgR5UUi
+2024-11-24 21:33:47,093 - linkedin_publisher_service.py - Line: 218 - INFO - Attempting to post document for user JqmOgR5UUi
+2024-11-24 21:33:47,347 - linkedin_publisher_service.py - Line: 243 - ERROR - Document registration failed: {"status":403,"serviceErrorCode":100,"code":"ACCESS_DENIED","message":"Field Value validation failed in REQUEST_BODY: Data Processing Exception while processing fields [/registerUploadRequest/recipes/relationshipType]"}
+2024-11-24 21:33:47,348 - linkedin_publisher_service.py - Line: 307 - ERROR - Unexpected error during document post: Document registration failed: {"status":403,"serviceErrorCode":100,"code":"ACCESS_DENIED","message":"Field Value validation failed in REQUEST_BODY: Data Processing Exception while processing fields [/registerUploadRequest/recipes/relationshipType]"}
+2024-11-24 21:33:47,349 - linkedin_test.py - Line: 70 - ERROR - An error occurred: Document registration failed: {"status":403,"serviceErrorCode":100,"code":"ACCESS_DENIED","message":"Field Value validation failed in REQUEST_BODY: Data Processing Exception while processing fields [/registerUploadRequest/recipes/relationshipType]"}
+2024-11-24 21:37:51,432 - linkedin_oauth_helper.py - Line: 19 - INFO - LinkedInOAuthHelper initialized
+2024-11-24 21:37:51,433 - linkedin_test.py - Line: 29 - INFO - Step 1: Authenticating user...
+2024-11-24 21:37:51,433 - linkedin_oauth_helper.py - Line: 114 - INFO - Step 1: Generating authorization URL
+2024-11-24 21:37:51,434 - linkedin_oauth_helper.py - Line: 25 - INFO - Authorization URL: https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=86wvn8r9qqrpwx&redirect_uri=https://www.reddit.com/&scope=w_member_social%20profile%20email%20openid
+2024-11-24 21:37:59,825 - linkedin_oauth_helper.py - Line: 122 - INFO - Step 2: Exchanging code for token
+2024-11-24 21:37:59,826 - linkedin_oauth_helper.py - Line: 38 - INFO - Exchanging authorization code for token
+2024-11-24 21:38:00,466 - linkedin_oauth_helper.py - Line: 44 - INFO - Token exchange successful
+2024-11-24 21:38:01,017 - linkedin_oauth_helper.py - Line: 51 - INFO - Token saved for user YOUR_TEST_USER_ID
+2024-11-24 21:38:01,018 - linkedin_oauth_helper.py - Line: 127 - INFO - Authentication flow completed for user: YOUR_TEST_USER_ID
+2024-11-24 21:38:01,019 - linkedin_test.py - Line: 63 - INFO - Step 5: Testing document post...
+2024-11-24 21:38:01,279 - linkedin_oauth_helper.py - Line: 58 - INFO - Retrieved token for user YOUR_TEST_USER_ID
+2024-11-24 21:38:01,593 - linkedin_oauth_helper.py - Line: 100 - INFO - User URN: JqmOgR5UUi
+2024-11-24 21:38:01,594 - linkedin_publisher_service.py - Line: 218 - INFO - Attempting to post document for user JqmOgR5UUi
+2024-11-24 21:38:01,845 - linkedin_publisher_service.py - Line: 247 - ERROR - Document registration failed: {"status":403,"serviceErrorCode":100,"code":"ACCESS_DENIED","message":"Field Value validation failed in REQUEST_BODY: Data Processing Exception while processing fields [/registerUploadRequest/recipes/serviceRelationships]"}
+2024-11-24 21:38:01,847 - linkedin_publisher_service.py - Line: 311 - ERROR - Unexpected error during document post: Document registration failed: {"status":403,"serviceErrorCode":100,"code":"ACCESS_DENIED","message":"Field Value validation failed in REQUEST_BODY: Data Processing Exception while processing fields [/registerUploadRequest/recipes/serviceRelationships]"}
+2024-11-24 21:38:01,847 - linkedin_test.py - Line: 70 - ERROR - An error occurred: Document registration failed: {"status":403,"serviceErrorCode":100,"code":"ACCESS_DENIED","message":"Field Value validation failed in REQUEST_BODY: Data Processing Exception while processing fields [/registerUploadRequest/recipes/serviceRelationships]"}
+2024-11-24 21:42:21,342 - linkedin_oauth_helper.py - Line: 19 - INFO - LinkedInOAuthHelper initialized
+2024-11-24 21:42:21,398 - linkedin_test.py - Line: 29 - INFO - Step 1: Authenticating user...
+2024-11-24 21:42:21,399 - linkedin_oauth_helper.py - Line: 114 - INFO - Step 1: Generating authorization URL
+2024-11-24 21:42:21,400 - linkedin_oauth_helper.py - Line: 25 - INFO - Authorization URL: https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=86wvn8r9qqrpwx&redirect_uri=https://www.reddit.com/&scope=w_member_social%20profile%20email%20openid
+2024-11-24 21:42:47,390 - linkedin_oauth_helper.py - Line: 122 - INFO - Step 2: Exchanging code for token
+2024-11-24 21:42:47,391 - linkedin_oauth_helper.py - Line: 38 - INFO - Exchanging authorization code for token
+2024-11-24 21:42:48,008 - linkedin_oauth_helper.py - Line: 44 - INFO - Token exchange successful
+2024-11-24 21:42:49,516 - linkedin_oauth_helper.py - Line: 51 - INFO - Token saved for user YOUR_TEST_USER_ID
+2024-11-24 21:42:49,516 - linkedin_oauth_helper.py - Line: 127 - INFO - Authentication flow completed for user: YOUR_TEST_USER_ID
+2024-11-24 21:42:49,518 - linkedin_test.py - Line: 63 - INFO - Step 5: Testing document post...
+2024-11-24 21:42:49,847 - linkedin_oauth_helper.py - Line: 58 - INFO - Retrieved token for user YOUR_TEST_USER_ID
+2024-11-24 21:42:50,142 - linkedin_oauth_helper.py - Line: 100 - INFO - User URN: JqmOgR5UUi
+2024-11-24 21:42:50,142 - linkedin_publisher_service.py - Line: 218 - INFO - Attempting to post document for user JqmOgR5UUi
+2024-11-24 21:42:50,369 - linkedin_publisher_service.py - Line: 247 - ERROR - Document registration failed: {"status":403,"serviceErrorCode":100,"code":"ACCESS_DENIED","message":"Field Value validation failed in REQUEST_BODY: Data Processing Exception while processing fields [/registerUploadRequest/recipes/serviceRelationships]"}
+2024-11-24 21:42:50,370 - linkedin_publisher_service.py - Line: 311 - ERROR - Unexpected error during document post: Document registration failed: {"status":403,"serviceErrorCode":100,"code":"ACCESS_DENIED","message":"Field Value validation failed in REQUEST_BODY: Data Processing Exception while processing fields [/registerUploadRequest/recipes/serviceRelationships]"}
+2024-11-24 21:42:50,371 - linkedin_test.py - Line: 70 - ERROR - An error occurred: Document registration failed: {"status":403,"serviceErrorCode":100,"code":"ACCESS_DENIED","message":"Field Value validation failed in REQUEST_BODY: Data Processing Exception while processing fields [/registerUploadRequest/recipes/serviceRelationships]"}
+2024-11-24 21:43:29,570 - linkedin_oauth_helper.py - Line: 19 - INFO - LinkedInOAuthHelper initialized
+2024-11-24 21:43:29,571 - linkedin_test.py - Line: 29 - INFO - Step 1: Authenticating user...
+2024-11-24 21:43:29,572 - linkedin_oauth_helper.py - Line: 114 - INFO - Step 1: Generating authorization URL
+2024-11-24 21:43:29,572 - linkedin_oauth_helper.py - Line: 25 - INFO - Authorization URL: https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=86wvn8r9qqrpwx&redirect_uri=https://www.reddit.com/&scope=w_member_social%20profile%20email%20openid
+2024-11-24 21:44:40,127 - linkedin_oauth_helper.py - Line: 122 - INFO - Step 2: Exchanging code for token
+2024-11-24 21:44:40,128 - linkedin_oauth_helper.py - Line: 38 - INFO - Exchanging authorization code for token
+2024-11-24 21:44:40,616 - linkedin_oauth_helper.py - Line: 44 - INFO - Token exchange successful
+2024-11-24 21:44:41,022 - linkedin_oauth_helper.py - Line: 51 - INFO - Token saved for user YOUR_TEST_USER_ID
+2024-11-24 21:44:41,023 - linkedin_oauth_helper.py - Line: 127 - INFO - Authentication flow completed for user: YOUR_TEST_USER_ID
+2024-11-24 21:44:41,024 - linkedin_test.py - Line: 63 - INFO - Step 5: Testing document post...
+2024-11-24 21:44:41,121 - linkedin_oauth_helper.py - Line: 58 - INFO - Retrieved token for user YOUR_TEST_USER_ID
+2024-11-24 21:44:41,416 - linkedin_oauth_helper.py - Line: 100 - INFO - User URN: JqmOgR5UUi
+2024-11-24 21:44:41,417 - linkedin_publisher_service.py - Line: 218 - INFO - Attempting to post document for user JqmOgR5UUi
+2024-11-24 21:44:41,641 - linkedin_publisher_service.py - Line: 247 - ERROR - Document registration failed: {"status":403,"serviceErrorCode":100,"code":"ACCESS_DENIED","message":"Field Value validation failed in REQUEST_BODY: Data Processing Exception while processing fields [/registerUploadRequest/recipes/serviceRelationships]"}
+2024-11-24 21:44:41,642 - linkedin_publisher_service.py - Line: 312 - ERROR - Unexpected error during document post: Document registration failed: {"status":403,"serviceErrorCode":100,"code":"ACCESS_DENIED","message":"Field Value validation failed in REQUEST_BODY: Data Processing Exception while processing fields [/registerUploadRequest/recipes/serviceRelationships]"}
+2024-11-24 21:44:41,643 - linkedin_test.py - Line: 70 - ERROR - An error occurred: Document registration failed: {"status":403,"serviceErrorCode":100,"code":"ACCESS_DENIED","message":"Field Value validation failed in REQUEST_BODY: Data Processing Exception while processing fields [/registerUploadRequest/recipes/serviceRelationships]"}
+2024-11-24 21:53:34,085 - linkedin_oauth_helper.py - Line: 19 - INFO - LinkedInOAuthHelper initialized
+2024-11-24 21:53:34,086 - linkedin_test.py - Line: 29 - INFO - Step 1: Authenticating user...
+2024-11-24 21:53:34,087 - linkedin_oauth_helper.py - Line: 114 - INFO - Step 1: Generating authorization URL
+2024-11-24 21:53:34,088 - linkedin_oauth_helper.py - Line: 25 - INFO - Authorization URL: https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=86wvn8r9qqrpwx&redirect_uri=https://www.reddit.com/&scope=w_member_social%20profile%20email%20openid
+2024-11-24 21:53:46,981 - linkedin_oauth_helper.py - Line: 122 - INFO - Step 2: Exchanging code for token
+2024-11-24 21:53:46,982 - linkedin_oauth_helper.py - Line: 38 - INFO - Exchanging authorization code for token
+2024-11-24 21:53:47,368 - linkedin_oauth_helper.py - Line: 44 - INFO - Token exchange successful
+2024-11-24 21:53:47,770 - linkedin_oauth_helper.py - Line: 51 - INFO - Token saved for user YOUR_TEST_USER_ID
+2024-11-24 21:53:47,770 - linkedin_oauth_helper.py - Line: 127 - INFO - Authentication flow completed for user: YOUR_TEST_USER_ID
+2024-11-24 21:53:47,771 - linkedin_test.py - Line: 63 - INFO - Step 5: Testing document post...
+2024-11-24 21:53:47,876 - linkedin_oauth_helper.py - Line: 58 - INFO - Retrieved token for user YOUR_TEST_USER_ID
+2024-11-24 21:53:48,185 - linkedin_oauth_helper.py - Line: 100 - INFO - User URN: JqmOgR5UUi
+2024-11-24 21:53:48,186 - linkedin_publisher_service.py - Line: 218 - INFO - Attempting to post document for user JqmOgR5UUi
+2024-11-24 21:53:48,422 - linkedin_publisher_service.py - Line: 299 - ERROR - Request error during document post for user JqmOgR5UUi: 403 Client Error: Forbidden for url: https://api.linkedin.com/v2/assets?action=registerUpload
+2024-11-24 21:53:48,423 - linkedin_test.py - Line: 70 - ERROR - An error occurred: Failed to post document on LinkedIn: 403 Client Error: Forbidden for url: https://api.linkedin.com/v2/assets?action=registerUpload
+2024-11-24 21:55:52,829 - linkedin_oauth_helper.py - Line: 19 - INFO - LinkedInOAuthHelper initialized
+2024-11-24 21:55:52,829 - linkedin_test.py - Line: 29 - INFO - Step 1: Authenticating user...
+2024-11-24 21:55:52,829 - linkedin_oauth_helper.py - Line: 114 - INFO - Step 1: Generating authorization URL
+2024-11-24 21:55:52,830 - linkedin_oauth_helper.py - Line: 25 - INFO - Authorization URL: https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=86wvn8r9qqrpwx&redirect_uri=https://www.reddit.com/&scope=w_member_social%20profile%20email%20openid
+2024-11-24 21:57:39,795 - linkedin_oauth_helper.py - Line: 19 - INFO - LinkedInOAuthHelper initialized
+2024-11-24 21:57:39,796 - linkedin_test.py - Line: 29 - INFO - Step 1: Authenticating user...
+2024-11-24 21:57:39,796 - linkedin_oauth_helper.py - Line: 114 - INFO - Step 1: Generating authorization URL
+2024-11-24 21:57:39,797 - linkedin_oauth_helper.py - Line: 25 - INFO - Authorization URL: https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=86wvn8r9qqrpwx&redirect_uri=https://www.reddit.com/&scope=w_member_social%20profile%20email%20openid
+2024-11-24 21:57:57,032 - linkedin_oauth_helper.py - Line: 122 - INFO - Step 2: Exchanging code for token
+2024-11-24 21:57:57,032 - linkedin_oauth_helper.py - Line: 38 - INFO - Exchanging authorization code for token
+2024-11-24 21:57:57,344 - linkedin_oauth_helper.py - Line: 44 - INFO - Token exchange successful
+2024-11-24 21:57:57,731 - linkedin_oauth_helper.py - Line: 51 - INFO - Token saved for user YOUR_TEST_USER_ID
+2024-11-24 21:57:57,731 - linkedin_oauth_helper.py - Line: 127 - INFO - Authentication flow completed for user: YOUR_TEST_USER_ID
+2024-11-24 21:57:57,733 - linkedin_test.py - Line: 63 - INFO - Step 5: Testing document post...
+2024-11-24 21:57:57,938 - linkedin_oauth_helper.py - Line: 58 - INFO - Retrieved token for user YOUR_TEST_USER_ID
+2024-11-24 21:57:58,280 - linkedin_oauth_helper.py - Line: 100 - INFO - User URN: JqmOgR5UUi
+2024-11-24 21:57:58,281 - linkedin_publisher_service.py - Line: 218 - INFO - Attempting to post document for user JqmOgR5UUi
+2024-11-24 21:57:58,584 - linkedin_publisher_service.py - Line: 300 - ERROR - Request error during document post for user JqmOgR5UUi: 403 Client Error: Forbidden for url: https://api.linkedin.com/v2/assets?action=registerUpload
+2024-11-24 21:57:58,585 - linkedin_test.py - Line: 70 - ERROR - An error occurred: Failed to post document on LinkedIn: 403 Client Error: Forbidden for url: https://api.linkedin.com/v2/assets?action=registerUpload
+2024-11-24 22:03:52,363 - linkedin_oauth_helper.py - Line: 19 - INFO - LinkedInOAuthHelper initialized
+2024-11-24 22:03:52,363 - linkedin_test.py - Line: 29 - INFO - Step 1: Authenticating user...
+2024-11-24 22:03:52,364 - linkedin_oauth_helper.py - Line: 114 - INFO - Step 1: Generating authorization URL
+2024-11-24 22:03:52,365 - linkedin_oauth_helper.py - Line: 25 - INFO - Authorization URL: https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=86wvn8r9qqrpwx&redirect_uri=https://www.reddit.com/&scope=w_member_social%20profile%20email%20openid
+2024-11-24 22:04:02,505 - linkedin_oauth_helper.py - Line: 122 - INFO - Step 2: Exchanging code for token
+2024-11-24 22:04:02,506 - linkedin_oauth_helper.py - Line: 38 - INFO - Exchanging authorization code for token
+2024-11-24 22:04:02,906 - linkedin_oauth_helper.py - Line: 44 - INFO - Token exchange successful
+2024-11-24 22:04:03,302 - linkedin_oauth_helper.py - Line: 51 - INFO - Token saved for user YOUR_TEST_USER_ID
+2024-11-24 22:04:03,302 - linkedin_oauth_helper.py - Line: 127 - INFO - Authentication flow completed for user: YOUR_TEST_USER_ID
+2024-11-24 22:04:03,305 - linkedin_test.py - Line: 63 - INFO - Step 5: Testing document post...
+2024-11-24 22:04:03,398 - linkedin_oauth_helper.py - Line: 58 - INFO - Retrieved token for user YOUR_TEST_USER_ID
+2024-11-24 22:04:03,707 - linkedin_oauth_helper.py - Line: 100 - INFO - User URN: JqmOgR5UUi
+2024-11-24 22:04:03,708 - linkedin_publisher_service.py - Line: 218 - INFO - Attempting to post document for user JqmOgR5UUi
+2024-11-24 22:04:03,967 - linkedin_publisher_service.py - Line: 246 - ERROR - Access denied: {'status': 403, 'serviceErrorCode': 100, 'code': 'ACCESS_DENIED', 'message': 'Field Value validation failed in REQUEST_BODY: Data Processing Exception while processing fields [/registerUploadRequest/recipes/relationshipType]'}
+2024-11-24 22:04:03,968 - linkedin_publisher_service.py - Line: 307 - ERROR - Unexpected error during document post: Access denied: Verify the access token and permissions.
+2024-11-24 22:04:03,969 - linkedin_test.py - Line: 70 - ERROR - An error occurred: Access denied: Verify the access token and permissions.
+2024-11-24 22:05:46,446 - linkedin_oauth_helper.py - Line: 19 - INFO - LinkedInOAuthHelper initialized
+2024-11-24 22:05:46,467 - linkedin_test.py - Line: 29 - INFO - Step 1: Authenticating user...
+2024-11-24 22:05:46,467 - linkedin_oauth_helper.py - Line: 114 - INFO - Step 1: Generating authorization URL
+2024-11-24 22:05:46,468 - linkedin_oauth_helper.py - Line: 25 - INFO - Authorization URL: https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=86wvn8r9qqrpwx&redirect_uri=https://www.reddit.com/&scope=w_member_social%20profile%20email%20openid
+2024-11-24 22:05:58,811 - linkedin_oauth_helper.py - Line: 122 - INFO - Step 2: Exchanging code for token
+2024-11-24 22:05:58,811 - linkedin_oauth_helper.py - Line: 38 - INFO - Exchanging authorization code for token
+2024-11-24 22:05:59,250 - linkedin_oauth_helper.py - Line: 44 - INFO - Token exchange successful
+2024-11-24 22:05:59,605 - linkedin_oauth_helper.py - Line: 51 - INFO - Token saved for user YOUR_TEST_USER_ID
+2024-11-24 22:05:59,605 - linkedin_oauth_helper.py - Line: 127 - INFO - Authentication flow completed for user: YOUR_TEST_USER_ID
+2024-11-24 22:05:59,606 - linkedin_test.py - Line: 63 - INFO - Step 5: Testing document post...
+2024-11-24 22:05:59,761 - linkedin_oauth_helper.py - Line: 58 - INFO - Retrieved token for user YOUR_TEST_USER_ID
+2024-11-24 22:06:00,163 - linkedin_oauth_helper.py - Line: 100 - INFO - User URN: JqmOgR5UUi
+2024-11-24 22:06:00,164 - linkedin_publisher_service.py - Line: 218 - INFO - Attempting to post document for user JqmOgR5UUi
+2024-11-24 22:06:00,365 - linkedin_publisher_service.py - Line: 245 - ERROR - Access denied: {'status': 403, 'serviceErrorCode': 100, 'code': 'ACCESS_DENIED', 'message': 'Field Value validation failed in REQUEST_BODY: Data Processing Exception while processing fields [/registerUploadRequest/recipes/relationshipType]'}
+2024-11-24 22:06:00,365 - linkedin_publisher_service.py - Line: 306 - ERROR - Unexpected error during document post: Access denied: Verify the access token and permissions.
+2024-11-24 22:06:00,365 - linkedin_test.py - Line: 70 - ERROR - An error occurred: Access denied: Verify the access token and permissions.
+2024-11-24 22:11:13,014 - linkedin_oauth_helper.py - Line: 19 - INFO - LinkedInOAuthHelper initialized
+2024-11-24 22:11:13,015 - linkedin_test.py - Line: 29 - INFO - Step 1: Authenticating user...
+2024-11-24 22:11:13,015 - linkedin_oauth_helper.py - Line: 114 - INFO - Step 1: Generating authorization URL
+2024-11-24 22:11:13,015 - linkedin_oauth_helper.py - Line: 25 - INFO - Authorization URL: https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=86wvn8r9qqrpwx&redirect_uri=https://www.reddit.com/&scope=w_member_social%20profile%20email%20openid
+2024-11-24 22:11:21,421 - linkedin_oauth_helper.py - Line: 122 - INFO - Step 2: Exchanging code for token
+2024-11-24 22:11:21,422 - linkedin_oauth_helper.py - Line: 38 - INFO - Exchanging authorization code for token
+2024-11-24 22:11:21,837 - linkedin_oauth_helper.py - Line: 44 - INFO - Token exchange successful
+2024-11-24 22:11:22,241 - linkedin_oauth_helper.py - Line: 51 - INFO - Token saved for user YOUR_TEST_USER_ID
+2024-11-24 22:11:22,242 - linkedin_oauth_helper.py - Line: 127 - INFO - Authentication flow completed for user: YOUR_TEST_USER_ID
+2024-11-24 22:11:22,243 - linkedin_test.py - Line: 63 - INFO - Step 5: Testing document post...
+2024-11-24 22:11:22,386 - linkedin_oauth_helper.py - Line: 58 - INFO - Retrieved token for user YOUR_TEST_USER_ID
+2024-11-24 22:11:22,631 - linkedin_oauth_helper.py - Line: 100 - INFO - User URN: JqmOgR5UUi
+2024-11-24 22:11:22,632 - linkedin_publisher_service.py - Line: 219 - INFO - Attempting to post document for user JqmOgR5UUi
+2024-11-24 22:11:23,000 - linkedin_publisher_service.py - Line: 304 - ERROR - Request error during document post for user JqmOgR5UUi: 403 Client Error: Forbidden for url: https://api.linkedin.com/v2/assets?action=registerUpload
+2024-11-24 22:11:23,000 - linkedin_test.py - Line: 70 - ERROR - An error occurred: Failed to post document on LinkedIn: 403 Client Error: Forbidden for url: https://api.linkedin.com/v2/assets?action=registerUpload
+2024-11-24 22:20:06,279 - linkedin_oauth_helper.py - Line: 19 - INFO - LinkedInOAuthHelper initialized
+2024-11-24 22:20:06,279 - linkedin_test.py - Line: 29 - INFO - Step 1: Authenticating user...
+2024-11-24 22:20:06,280 - linkedin_oauth_helper.py - Line: 114 - INFO - Step 1: Generating authorization URL
+2024-11-24 22:20:06,280 - linkedin_oauth_helper.py - Line: 25 - INFO - Authorization URL: https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=86wvn8r9qqrpwx&redirect_uri=https://www.reddit.com/&scope=w_member_social%20profile%20email%20openid
+2024-11-24 22:20:24,026 - linkedin_oauth_helper.py - Line: 122 - INFO - Step 2: Exchanging code for token
+2024-11-24 22:20:24,026 - linkedin_oauth_helper.py - Line: 38 - INFO - Exchanging authorization code for token
+2024-11-24 22:20:24,429 - linkedin_oauth_helper.py - Line: 44 - INFO - Token exchange successful
+2024-11-24 22:20:24,839 - linkedin_oauth_helper.py - Line: 51 - INFO - Token saved for user YOUR_TEST_USER_ID
+2024-11-24 22:20:24,840 - linkedin_oauth_helper.py - Line: 127 - INFO - Authentication flow completed for user: YOUR_TEST_USER_ID
+2024-11-24 22:20:24,841 - linkedin_test.py - Line: 63 - INFO - Step 5: Testing document post...
+2024-11-24 22:20:24,939 - linkedin_oauth_helper.py - Line: 58 - INFO - Retrieved token for user YOUR_TEST_USER_ID
+2024-11-24 22:20:25,199 - linkedin_oauth_helper.py - Line: 100 - INFO - User URN: JqmOgR5UUi
+2024-11-24 22:20:25,199 - linkedin_publisher_service.py - Line: 218 - INFO - Attempting to post document for user JqmOgR5UUi
+2024-11-24 22:20:25,399 - linkedin_publisher_service.py - Line: 292 - ERROR - Request failed during document post for user JqmOgR5UUi: 404 Client Error: Not Found for url: https://api.linkedin.com/v2//rest/documents?action=initializeUpload
+2024-11-24 22:20:25,399 - linkedin_test.py - Line: 70 - ERROR - An error occurred: Failed to post document on LinkedIn: 404 Client Error: Not Found for url: https://api.linkedin.com/v2//rest/documents?action=initializeUpload
+2024-11-24 22:21:06,369 - linkedin_oauth_helper.py - Line: 19 - INFO - LinkedInOAuthHelper initialized
+2024-11-24 22:21:06,369 - linkedin_test.py - Line: 29 - INFO - Step 1: Authenticating user...
+2024-11-24 22:21:06,370 - linkedin_oauth_helper.py - Line: 114 - INFO - Step 1: Generating authorization URL
+2024-11-24 22:21:06,370 - linkedin_oauth_helper.py - Line: 25 - INFO - Authorization URL: https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=86wvn8r9qqrpwx&redirect_uri=https://www.reddit.com/&scope=w_member_social%20profile%20email%20openid
+2024-11-24 22:21:14,365 - linkedin_oauth_helper.py - Line: 122 - INFO - Step 2: Exchanging code for token
+2024-11-24 22:21:14,366 - linkedin_oauth_helper.py - Line: 38 - INFO - Exchanging authorization code for token
+2024-11-24 22:21:14,712 - linkedin_oauth_helper.py - Line: 44 - INFO - Token exchange successful
+2024-11-24 22:21:14,962 - linkedin_oauth_helper.py - Line: 51 - INFO - Token saved for user YOUR_TEST_USER_ID
+2024-11-24 22:21:14,963 - linkedin_oauth_helper.py - Line: 127 - INFO - Authentication flow completed for user: YOUR_TEST_USER_ID
+2024-11-24 22:21:14,964 - linkedin_test.py - Line: 63 - INFO - Step 5: Testing document post...
+2024-11-24 22:21:15,124 - linkedin_oauth_helper.py - Line: 58 - INFO - Retrieved token for user YOUR_TEST_USER_ID
+2024-11-24 22:21:15,366 - linkedin_oauth_helper.py - Line: 100 - INFO - User URN: JqmOgR5UUi
+2024-11-24 22:21:15,367 - linkedin_publisher_service.py - Line: 218 - INFO - Attempting to post document for user JqmOgR5UUi
+2024-11-24 22:21:15,554 - linkedin_publisher_service.py - Line: 292 - ERROR - Request failed during document post for user JqmOgR5UUi: 404 Client Error: Not Found for url: https://api.linkedin.com/v2/rest/documents?action=initializeUpload
+2024-11-24 22:21:15,555 - linkedin_test.py - Line: 70 - ERROR - An error occurred: Failed to post document on LinkedIn: 404 Client Error: Not Found for url: https://api.linkedin.com/v2/rest/documents?action=initializeUpload
+2024-11-24 22:26:28,723 - linkedin_oauth_helper.py - Line: 19 - INFO - LinkedInOAuthHelper initialized
+2024-11-24 22:26:28,751 - linkedin_test.py - Line: 29 - INFO - Step 1: Authenticating user...
+2024-11-24 22:26:28,751 - linkedin_oauth_helper.py - Line: 114 - INFO - Step 1: Generating authorization URL
+2024-11-24 22:26:28,751 - linkedin_oauth_helper.py - Line: 25 - INFO - Authorization URL: https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=86wvn8r9qqrpwx&redirect_uri=https://www.reddit.com/&scope=w_member_social%20profile%20email%20openid
+2024-11-24 22:26:37,400 - linkedin_oauth_helper.py - Line: 122 - INFO - Step 2: Exchanging code for token
+2024-11-24 22:26:37,400 - linkedin_oauth_helper.py - Line: 38 - INFO - Exchanging authorization code for token
+2024-11-24 22:26:37,735 - linkedin_oauth_helper.py - Line: 44 - INFO - Token exchange successful
+2024-11-24 22:26:38,136 - linkedin_oauth_helper.py - Line: 51 - INFO - Token saved for user YOUR_TEST_USER_ID
+2024-11-24 22:26:38,136 - linkedin_oauth_helper.py - Line: 127 - INFO - Authentication flow completed for user: YOUR_TEST_USER_ID
+2024-11-24 22:26:38,137 - linkedin_test.py - Line: 63 - INFO - Step 5: Testing document post...
+2024-11-24 22:26:38,307 - linkedin_oauth_helper.py - Line: 58 - INFO - Retrieved token for user YOUR_TEST_USER_ID
+2024-11-24 22:26:38,702 - linkedin_oauth_helper.py - Line: 100 - INFO - User URN: JqmOgR5UUi
+2024-11-24 22:26:38,702 - linkedin_publisher_service.py - Line: 236 - INFO - Attempting to post document for user JqmOgR5UUi
+2024-11-24 22:26:38,888 - linkedin_publisher_service.py - Line: 324 - ERROR - Request error during document post for user JqmOgR5UUi: 403 Client Error: Forbidden for url: https://api.linkedin.com/v2/assets?action=registerUpload
+2024-11-24 22:26:38,888 - linkedin_test.py - Line: 70 - ERROR - An error occurred: Failed to post document on LinkedIn: 403 Client Error: Forbidden for url: https://api.linkedin.com/v2/assets?action=registerUpload
+2024-11-24 22:29:07,622 - linkedin_oauth_helper.py - Line: 19 - INFO - LinkedInOAuthHelper initialized
+2024-11-24 22:29:07,623 - linkedin_test.py - Line: 29 - INFO - Step 1: Authenticating user...
+2024-11-24 22:29:07,623 - linkedin_oauth_helper.py - Line: 114 - INFO - Step 1: Generating authorization URL
+2024-11-24 22:29:07,623 - linkedin_oauth_helper.py - Line: 25 - INFO - Authorization URL: https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=86wvn8r9qqrpwx&redirect_uri=https://www.reddit.com/&scope=w_member_social%20profile%20email%20openid
+2024-11-24 22:29:15,979 - linkedin_oauth_helper.py - Line: 122 - INFO - Step 2: Exchanging code for token
+2024-11-24 22:29:15,980 - linkedin_oauth_helper.py - Line: 38 - INFO - Exchanging authorization code for token
+2024-11-24 22:29:16,381 - linkedin_oauth_helper.py - Line: 44 - INFO - Token exchange successful
+2024-11-24 22:29:16,680 - linkedin_oauth_helper.py - Line: 51 - INFO - Token saved for user YOUR_TEST_USER_ID
+2024-11-24 22:29:16,681 - linkedin_oauth_helper.py - Line: 127 - INFO - Authentication flow completed for user: YOUR_TEST_USER_ID
+2024-11-24 22:29:16,682 - linkedin_test.py - Line: 63 - INFO - Step 5: Testing document post...
+2024-11-24 22:29:16,682 - linkedin_test.py - Line: 70 - ERROR - An error occurred: 'LinkedInPublisherService' object has no attribute 'headers'
+2024-11-24 22:34:19,949 - linkedin_oauth_helper.py - Line: 19 - INFO - LinkedInOAuthHelper initialized
+2024-11-24 22:34:19,949 - linkedin_test.py - Line: 29 - INFO - Step 1: Authenticating user...
+2024-11-24 22:34:19,949 - linkedin_oauth_helper.py - Line: 114 - INFO - Step 1: Generating authorization URL
+2024-11-24 22:34:19,950 - linkedin_oauth_helper.py - Line: 25 - INFO - Authorization URL: https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=86wvn8r9qqrpwx&redirect_uri=https://www.reddit.com/&scope=w_member_social%20profile%20email%20openid
+2024-11-24 22:34:31,803 - linkedin_oauth_helper.py - Line: 122 - INFO - Step 2: Exchanging code for token
+2024-11-24 22:34:31,803 - linkedin_oauth_helper.py - Line: 38 - INFO - Exchanging authorization code for token
+2024-11-24 22:34:32,266 - linkedin_oauth_helper.py - Line: 44 - INFO - Token exchange successful
+2024-11-24 22:34:32,569 - linkedin_oauth_helper.py - Line: 51 - INFO - Token saved for user YOUR_TEST_USER_ID
+2024-11-24 22:34:32,570 - linkedin_oauth_helper.py - Line: 127 - INFO - Authentication flow completed for user: YOUR_TEST_USER_ID
+2024-11-24 22:34:32,570 - linkedin_test.py - Line: 63 - INFO - Step 5: Testing document post...
+2024-11-24 22:34:32,666 - linkedin_oauth_helper.py - Line: 58 - INFO - Retrieved token for user YOUR_TEST_USER_ID
+2024-11-24 22:34:32,961 - linkedin_oauth_helper.py - Line: 100 - INFO - User URN: JqmOgR5UUi
+2024-11-24 22:34:32,962 - linkedin_publisher_service.py - Line: 218 - INFO - Attempting to post document for user JqmOgR5UUi
+2024-11-24 22:34:33,143 - linkedin_publisher_service.py - Line: 299 - ERROR - Request failed during document post for user JqmOgR5UUi: 404 Client Error: Not Found for url: https://api.linkedin.com/v2/ugcPosts?action=registerUpload
+2024-11-24 22:34:33,144 - linkedin_test.py - Line: 70 - ERROR - An error occurred: Failed to post document on LinkedIn: 404 Client Error: Not Found for url: https://api.linkedin.com/v2/ugcPosts?action=registerUpload
+2024-11-24 22:35:55,726 - linkedin_oauth_helper.py - Line: 19 - INFO - LinkedInOAuthHelper initialized
+2024-11-24 22:35:55,726 - linkedin_test.py - Line: 29 - INFO - Step 1: Authenticating user...
+2024-11-24 22:35:55,726 - linkedin_oauth_helper.py - Line: 114 - INFO - Step 1: Generating authorization URL
+2024-11-24 22:35:55,726 - linkedin_oauth_helper.py - Line: 25 - INFO - Authorization URL: https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=86wvn8r9qqrpwx&redirect_uri=https://www.reddit.com/&scope=w_member_social%20profile%20email%20openid
+2024-11-24 22:36:15,719 - linkedin_oauth_helper.py - Line: 122 - INFO - Step 2: Exchanging code for token
+2024-11-24 22:36:15,720 - linkedin_oauth_helper.py - Line: 38 - INFO - Exchanging authorization code for token
+2024-11-24 22:36:16,027 - linkedin_oauth_helper.py - Line: 44 - INFO - Token exchange successful
+2024-11-24 22:36:16,230 - linkedin_oauth_helper.py - Line: 51 - INFO - Token saved for user YOUR_TEST_USER_ID
+2024-11-24 22:36:16,230 - linkedin_oauth_helper.py - Line: 127 - INFO - Authentication flow completed for user: YOUR_TEST_USER_ID
+2024-11-24 22:36:16,230 - linkedin_test.py - Line: 63 - INFO - Step 5: Testing document post...
+2024-11-24 22:36:16,397 - linkedin_oauth_helper.py - Line: 58 - INFO - Retrieved token for user YOUR_TEST_USER_ID
+2024-11-24 22:36:16,635 - linkedin_oauth_helper.py - Line: 100 - INFO - User URN: JqmOgR5UUi
+2024-11-24 22:36:16,636 - linkedin_publisher_service.py - Line: 218 - INFO - Attempting to post document for user JqmOgR5UUi
+2024-11-24 22:36:16,823 - linkedin_publisher_service.py - Line: 299 - ERROR - Request failed during document post for user JqmOgR5UUi: 404 Client Error: Not Found for url: https://api.linkedin.com/v2/ugcPosts?action=registerUpload
+2024-11-24 22:36:16,823 - linkedin_test.py - Line: 70 - ERROR - An error occurred: Failed to post document on LinkedIn: 404 Client Error: Not Found for url: https://api.linkedin.com/v2/ugcPosts?action=registerUpload
+2024-11-24 22:38:27,583 - linkedin_oauth_helper.py - Line: 19 - INFO - LinkedInOAuthHelper initialized
+2024-11-24 22:38:27,584 - linkedin_test.py - Line: 29 - INFO - Step 1: Authenticating user...
+2024-11-24 22:38:27,584 - linkedin_oauth_helper.py - Line: 114 - INFO - Step 1: Generating authorization URL
+2024-11-24 22:38:27,584 - linkedin_oauth_helper.py - Line: 25 - INFO - Authorization URL: https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=86wvn8r9qqrpwx&redirect_uri=https://www.reddit.com/&scope=w_member_social%20profile%20email%20openid
+2024-11-24 22:38:39,992 - linkedin_oauth_helper.py - Line: 122 - INFO - Step 2: Exchanging code for token
+2024-11-24 22:38:39,992 - linkedin_oauth_helper.py - Line: 38 - INFO - Exchanging authorization code for token
+2024-11-24 22:38:40,325 - linkedin_oauth_helper.py - Line: 44 - INFO - Token exchange successful
+2024-11-24 22:38:40,547 - linkedin_oauth_helper.py - Line: 51 - INFO - Token saved for user YOUR_TEST_USER_ID
+2024-11-24 22:38:40,547 - linkedin_oauth_helper.py - Line: 127 - INFO - Authentication flow completed for user: YOUR_TEST_USER_ID
+2024-11-24 22:38:40,548 - linkedin_test.py - Line: 63 - INFO - Step 5: Testing document post...
+2024-11-24 22:38:40,718 - linkedin_oauth_helper.py - Line: 58 - INFO - Retrieved token for user YOUR_TEST_USER_ID
+2024-11-24 22:38:40,948 - linkedin_oauth_helper.py - Line: 100 - INFO - User URN: JqmOgR5UUi
+2024-11-24 22:38:40,948 - linkedin_publisher_service.py - Line: 218 - INFO - Attempting to post document for user JqmOgR5UUi
+2024-11-24 22:38:41,126 - linkedin_publisher_service.py - Line: 298 - ERROR - Request failed during document post for user JqmOgR5UUi: 404 Client Error: Not Found for url: https://api.linkedin.com/v2/rest/documents?action=initializeUpload
+2024-11-24 22:38:41,127 - linkedin_test.py - Line: 70 - ERROR - An error occurred: Failed to post document on LinkedIn: 404 Client Error: Not Found for url: https://api.linkedin.com/v2/rest/documents?action=initializeUpload
+2024-11-24 22:43:11,202 - linkedin_oauth_helper.py - Line: 19 - INFO - LinkedInOAuthHelper initialized
+2024-11-24 22:43:11,231 - linkedin_test.py - Line: 29 - INFO - Step 1: Authenticating user...
+2024-11-24 22:43:11,232 - linkedin_oauth_helper.py - Line: 114 - INFO - Step 1: Generating authorization URL
+2024-11-24 22:43:11,232 - linkedin_oauth_helper.py - Line: 25 - INFO - Authorization URL: https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=86wvn8r9qqrpwx&redirect_uri=https://www.reddit.com/&scope=w_member_social%20profile%20email%20openid
+2024-11-24 22:43:18,122 - linkedin_oauth_helper.py - Line: 122 - INFO - Step 2: Exchanging code for token
+2024-11-24 22:43:18,122 - linkedin_oauth_helper.py - Line: 38 - INFO - Exchanging authorization code for token
+2024-11-24 22:43:18,540 - linkedin_oauth_helper.py - Line: 44 - INFO - Token exchange successful
+2024-11-24 22:43:18,910 - linkedin_oauth_helper.py - Line: 51 - INFO - Token saved for user YOUR_TEST_USER_ID
+2024-11-24 22:43:18,910 - linkedin_oauth_helper.py - Line: 127 - INFO - Authentication flow completed for user: YOUR_TEST_USER_ID
+2024-11-24 22:43:18,911 - linkedin_test.py - Line: 63 - INFO - Step 5: Testing document post...
+2024-11-24 22:43:19,079 - linkedin_oauth_helper.py - Line: 58 - INFO - Retrieved token for user YOUR_TEST_USER_ID
+2024-11-24 22:43:19,335 - linkedin_oauth_helper.py - Line: 100 - INFO - User URN: JqmOgR5UUi
+2024-11-24 22:43:19,335 - linkedin_publisher_service.py - Line: 218 - INFO - Attempting to post document for user JqmOgR5UUi
+2024-11-24 22:43:19,520 - linkedin_publisher_service.py - Line: 289 - ERROR - Request failed during document post for user JqmOgR5UUi: 404 Client Error: Not Found for url: https://api.linkedin.com/v2/rest/documents?action=initializeUpload
+2024-11-24 22:43:19,520 - linkedin_test.py - Line: 70 - ERROR - An error occurred: Failed to post document on LinkedIn: 404 Client Error: Not Found for url: https://api.linkedin.com/v2/rest/documents?action=initializeUpload
+2024-11-24 22:45:17,510 - linkedin_oauth_helper.py - Line: 19 - INFO - LinkedInOAuthHelper initialized
+2024-11-24 22:45:17,510 - linkedin_test.py - Line: 29 - INFO - Step 1: Authenticating user...
+2024-11-24 22:45:17,510 - linkedin_oauth_helper.py - Line: 114 - INFO - Step 1: Generating authorization URL
+2024-11-24 22:45:17,510 - linkedin_oauth_helper.py - Line: 25 - INFO - Authorization URL: https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=86wvn8r9qqrpwx&redirect_uri=https://www.reddit.com/&scope=w_member_social%20profile%20email%20openid
+2024-11-24 22:45:25,734 - linkedin_oauth_helper.py - Line: 122 - INFO - Step 2: Exchanging code for token
+2024-11-24 22:45:25,734 - linkedin_oauth_helper.py - Line: 38 - INFO - Exchanging authorization code for token
+2024-11-24 22:45:26,089 - linkedin_oauth_helper.py - Line: 44 - INFO - Token exchange successful
+2024-11-24 22:45:26,326 - linkedin_oauth_helper.py - Line: 51 - INFO - Token saved for user YOUR_TEST_USER_ID
+2024-11-24 22:45:26,326 - linkedin_oauth_helper.py - Line: 127 - INFO - Authentication flow completed for user: YOUR_TEST_USER_ID
+2024-11-24 22:45:26,328 - linkedin_test.py - Line: 63 - INFO - Step 5: Testing document post...
+2024-11-24 22:45:26,456 - linkedin_oauth_helper.py - Line: 58 - INFO - Retrieved token for user YOUR_TEST_USER_ID
+2024-11-24 22:45:26,718 - linkedin_oauth_helper.py - Line: 100 - INFO - User URN: JqmOgR5UUi
+2024-11-24 22:45:26,718 - linkedin_publisher_service.py - Line: 218 - INFO - Attempting to post document for user JqmOgR5UUi
+2024-11-24 22:45:26,897 - linkedin_publisher_service.py - Line: 289 - ERROR - Request failed during document post for user JqmOgR5UUi: 404 Client Error: Not Found for url: https://api.linkedin.com/v3/rest/documents?action=initializeUpload
+2024-11-24 22:45:26,897 - linkedin_test.py - Line: 70 - ERROR - An error occurred: Failed to post document on LinkedIn: 404 Client Error: Not Found for url: https://api.linkedin.com/v3/rest/documents?action=initializeUpload
+2024-11-24 22:49:22,521 - linkedin_oauth_helper.py - Line: 19 - INFO - LinkedInOAuthHelper initialized
+2024-11-24 22:49:22,521 - linkedin_test.py - Line: 29 - INFO - Step 1: Authenticating user...
+2024-11-24 22:49:22,521 - linkedin_oauth_helper.py - Line: 114 - INFO - Step 1: Generating authorization URL
+2024-11-24 22:49:22,522 - linkedin_oauth_helper.py - Line: 25 - INFO - Authorization URL: https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=86wvn8r9qqrpwx&redirect_uri=https://www.reddit.com/&scope=w_member_social%20profile%20email%20openid
+2024-11-24 22:49:30,912 - linkedin_oauth_helper.py - Line: 122 - INFO - Step 2: Exchanging code for token
+2024-11-24 22:49:30,913 - linkedin_oauth_helper.py - Line: 38 - INFO - Exchanging authorization code for token
+2024-11-24 22:49:31,265 - linkedin_oauth_helper.py - Line: 44 - INFO - Token exchange successful
+2024-11-24 22:49:31,554 - linkedin_oauth_helper.py - Line: 51 - INFO - Token saved for user YOUR_TEST_USER_ID
+2024-11-24 22:49:31,554 - linkedin_oauth_helper.py - Line: 127 - INFO - Authentication flow completed for user: YOUR_TEST_USER_ID
+2024-11-24 22:49:31,554 - linkedin_test.py - Line: 63 - INFO - Step 5: Testing document post...
+2024-11-24 22:49:31,714 - linkedin_oauth_helper.py - Line: 58 - INFO - Retrieved token for user YOUR_TEST_USER_ID
+2024-11-24 22:49:31,992 - linkedin_oauth_helper.py - Line: 100 - INFO - User URN: JqmOgR5UUi
+2024-11-24 22:49:31,993 - linkedin_publisher_service.py - Line: 218 - INFO - Attempting to post document for user JqmOgR5UUi
+2024-11-24 22:49:32,187 - linkedin_publisher_service.py - Line: 247 - ERROR - Document registration failed: {"status":403,"serviceErrorCode":100,"code":"ACCESS_DENIED","message":"Field Value validation failed in REQUEST_BODY: Data Processing Exception while processing fields [/registerUploadRequest/recipes/serviceRelationships]"}
+2024-11-24 22:49:32,188 - linkedin_publisher_service.py - Line: 312 - ERROR - Unexpected error during document post: Document registration failed: {"status":403,"serviceErrorCode":100,"code":"ACCESS_DENIED","message":"Field Value validation failed in REQUEST_BODY: Data Processing Exception while processing fields [/registerUploadRequest/recipes/serviceRelationships]"}
+2024-11-24 22:49:32,188 - linkedin_test.py - Line: 70 - ERROR - An error occurred: Document registration failed: {"status":403,"serviceErrorCode":100,"code":"ACCESS_DENIED","message":"Field Value validation failed in REQUEST_BODY: Data Processing Exception while processing fields [/registerUploadRequest/recipes/serviceRelationships]"}
+2024-11-24 22:49:47,661 - linkedin_oauth_helper.py - Line: 19 - INFO - LinkedInOAuthHelper initialized
+2024-11-24 22:49:47,661 - linkedin_test.py - Line: 29 - INFO - Step 1: Authenticating user...
+2024-11-24 22:49:47,661 - linkedin_oauth_helper.py - Line: 114 - INFO - Step 1: Generating authorization URL
+2024-11-24 22:49:47,661 - linkedin_oauth_helper.py - Line: 25 - INFO - Authorization URL: https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=86wvn8r9qqrpwx&redirect_uri=https://www.reddit.com/&scope=w_member_social%20profile%20email%20openid
+2024-11-24 22:49:56,344 - linkedin_oauth_helper.py - Line: 122 - INFO - Step 2: Exchanging code for token
+2024-11-24 22:49:56,344 - linkedin_oauth_helper.py - Line: 38 - INFO - Exchanging authorization code for token
+2024-11-24 22:49:56,598 - linkedin_oauth_helper.py - Line: 44 - INFO - Token exchange successful
+2024-11-24 22:49:56,806 - linkedin_oauth_helper.py - Line: 51 - INFO - Token saved for user YOUR_TEST_USER_ID
+2024-11-24 22:49:56,807 - linkedin_oauth_helper.py - Line: 127 - INFO - Authentication flow completed for user: YOUR_TEST_USER_ID
+2024-11-24 22:49:56,807 - linkedin_test.py - Line: 70 - ERROR - An error occurred: Can't instantiate abstract class LinkedInPublisherService with abstract methods post_document
+2024-11-24 22:50:25,672 - linkedin_oauth_helper.py - Line: 19 - INFO - LinkedInOAuthHelper initialized
+2024-11-24 22:50:25,672 - linkedin_test.py - Line: 29 - INFO - Step 1: Authenticating user...
+2024-11-24 22:50:25,672 - linkedin_oauth_helper.py - Line: 114 - INFO - Step 1: Generating authorization URL
+2024-11-24 22:50:25,672 - linkedin_oauth_helper.py - Line: 25 - INFO - Authorization URL: https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=86wvn8r9qqrpwx&redirect_uri=https://www.reddit.com/&scope=w_member_social%20profile%20email%20openid
+2024-11-24 22:50:27,674 - linkedin_oauth_helper.py - Line: 122 - INFO - Step 2: Exchanging code for token
+2024-11-24 22:50:27,674 - linkedin_oauth_helper.py - Line: 38 - INFO - Exchanging authorization code for token
+2024-11-24 22:50:28,044 - linkedin_oauth_helper.py - Line: 130 - ERROR - Error in authentication flow: 400 Client Error: Bad Request for url: https://www.linkedin.com/oauth/v2/accessToken
+2024-11-24 22:50:28,045 - linkedin_test.py - Line: 70 - ERROR - An error occurred: 400 Client Error: Bad Request for url: https://www.linkedin.com/oauth/v2/accessToken
+2024-11-24 22:50:41,167 - linkedin_oauth_helper.py - Line: 19 - INFO - LinkedInOAuthHelper initialized
+2024-11-24 22:50:41,167 - linkedin_test.py - Line: 29 - INFO - Step 1: Authenticating user...
+2024-11-24 22:50:41,167 - linkedin_oauth_helper.py - Line: 114 - INFO - Step 1: Generating authorization URL
+2024-11-24 22:50:41,167 - linkedin_oauth_helper.py - Line: 25 - INFO - Authorization URL: https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=86wvn8r9qqrpwx&redirect_uri=https://www.reddit.com/&scope=w_member_social%20profile%20email%20openid
+2024-11-24 22:51:05,047 - linkedin_oauth_helper.py - Line: 122 - INFO - Step 2: Exchanging code for token
+2024-11-24 22:51:05,047 - linkedin_oauth_helper.py - Line: 38 - INFO - Exchanging authorization code for token
+2024-11-24 22:51:05,330 - linkedin_oauth_helper.py - Line: 44 - INFO - Token exchange successful
+2024-11-24 22:51:05,524 - linkedin_oauth_helper.py - Line: 51 - INFO - Token saved for user YOUR_TEST_USER_ID
+2024-11-24 22:51:05,524 - linkedin_oauth_helper.py - Line: 127 - INFO - Authentication flow completed for user: YOUR_TEST_USER_ID
+2024-11-24 22:51:05,525 - linkedin_test.py - Line: 63 - INFO - Step 5: Testing document post...
+2024-11-24 22:51:05,690 - linkedin_oauth_helper.py - Line: 58 - INFO - Retrieved token for user YOUR_TEST_USER_ID
+2024-11-24 22:51:05,932 - linkedin_oauth_helper.py - Line: 100 - INFO - User URN: JqmOgR5UUi
+2024-11-24 22:51:05,932 - linkedin_publisher_service.py - Line: 218 - INFO - Attempting to post document for user JqmOgR5UUi
+2024-11-24 22:51:06,278 - linkedin_publisher_service.py - Line: 299 - ERROR - Request error during document post for user JqmOgR5UUi: 403 Client Error: Forbidden for url: https://api.linkedin.com/v2/assets?action=registerUpload
+2024-11-24 22:51:06,279 - linkedin_test.py - Line: 70 - ERROR - An error occurred: Failed to post document on LinkedIn: 403 Client Error: Forbidden for url: https://api.linkedin.com/v2/assets?action=registerUpload
+2024-11-24 23:31:15,384 - linkedin_oauth_helper.py - Line: 19 - INFO - LinkedInOAuthHelper initialized
+2024-11-24 23:31:15,405 - linkedin_test.py - Line: 29 - INFO - Step 1: Authenticating user...
+2024-11-24 23:31:15,405 - linkedin_oauth_helper.py - Line: 114 - INFO - Step 1: Generating authorization URL
+2024-11-24 23:31:15,406 - linkedin_oauth_helper.py - Line: 25 - INFO - Authorization URL: https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=86wvn8r9qqrpwx&redirect_uri=https://www.reddit.com/&scope=w_member_social%20profile%20email%20openid
+2024-11-24 23:31:34,296 - linkedin_oauth_helper.py - Line: 19 - INFO - LinkedInOAuthHelper initialized
+2024-11-24 23:31:34,296 - linkedin_test.py - Line: 29 - INFO - Step 1: Authenticating user...
+2024-11-24 23:31:34,296 - linkedin_oauth_helper.py - Line: 114 - INFO - Step 1: Generating authorization URL
+2024-11-24 23:31:34,297 - linkedin_oauth_helper.py - Line: 25 - INFO - Authorization URL: https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=86wvn8r9qqrpwx&redirect_uri=https://www.reddit.com/&scope=w_member_social%20profile%20email%20openid
+2024-11-24 23:32:31,760 - linkedin_oauth_helper.py - Line: 122 - INFO - Step 2: Exchanging code for token
+2024-11-24 23:32:31,760 - linkedin_oauth_helper.py - Line: 38 - INFO - Exchanging authorization code for token
+2024-11-24 23:32:32,205 - linkedin_oauth_helper.py - Line: 44 - INFO - Token exchange successful
+2024-11-24 23:32:32,633 - linkedin_oauth_helper.py - Line: 51 - INFO - Token saved for user YOUR_TEST_USER_ID
+2024-11-24 23:32:32,633 - linkedin_oauth_helper.py - Line: 127 - INFO - Authentication flow completed for user: YOUR_TEST_USER_ID
+2024-11-24 23:32:32,640 - linkedin_test.py - Line: 54 - INFO - Step 4: Testing video post...
+2024-11-24 23:32:32,791 - linkedin_oauth_helper.py - Line: 58 - INFO - Retrieved token for user YOUR_TEST_USER_ID
+2024-11-24 23:32:33,038 - linkedin_oauth_helper.py - Line: 100 - INFO - User URN: JqmOgR5UUi
+2024-11-24 23:32:33,039 - linkedin_publisher_service.py - Line: 133 - INFO - Attempting to post video for user JqmOgR5UUi
+2024-11-24 23:32:34,889 - linkedin_publisher_service.py - Line: 171 - INFO - Video upload successful for asset: urn:li:digitalmediaAsset:D5605AQHl4dSI6V7l6w
+2024-11-24 23:32:35,320 - linkedin_publisher_service.py - Line: 197 - INFO - Video post published successfully for user JqmOgR5UUi
+2024-11-24 23:32:35,321 - linkedin_test.py - Line: 56 - INFO - Video Post Response: {'id': 'urn:li:ugcPost:7266715384089632771'}
+2024-11-24 23:46:23,542 - linkedin_oauth_helper.py - Line: 19 - INFO - LinkedInOAuthHelper initialized
+2024-11-24 23:46:23,567 - linkedin_test.py - Line: 29 - INFO - Step 1: Authenticating user...
+2024-11-24 23:46:23,568 - linkedin_oauth_helper.py - Line: 114 - INFO - Step 1: Generating authorization URL
+2024-11-24 23:46:23,568 - linkedin_oauth_helper.py - Line: 25 - INFO - Authorization URL: https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=86wvn8r9qqrpwx&redirect_uri=https://www.reddit.com/&scope=w_member_social%20profile%20email%20openid
+2024-11-24 23:46:37,939 - linkedin_oauth_helper.py - Line: 122 - INFO - Step 2: Exchanging code for token
+2024-11-24 23:46:37,939 - linkedin_oauth_helper.py - Line: 38 - INFO - Exchanging authorization code for token
+2024-11-24 23:46:38,302 - linkedin_oauth_helper.py - Line: 44 - INFO - Token exchange successful
+2024-11-24 23:46:38,674 - linkedin_oauth_helper.py - Line: 51 - INFO - Token saved for user YOUR_TEST_USER_ID
+2024-11-24 23:46:38,674 - linkedin_oauth_helper.py - Line: 127 - INFO - Authentication flow completed for user: YOUR_TEST_USER_ID
+2024-11-24 23:46:38,675 - linkedin_test.py - Line: 63 - INFO - Step 5: Testing document post...
+2024-11-24 23:46:38,882 - linkedin_oauth_helper.py - Line: 58 - INFO - Retrieved token for user YOUR_TEST_USER_ID
+2024-11-24 23:46:39,131 - linkedin_oauth_helper.py - Line: 100 - INFO - User URN: JqmOgR5UUi
+2024-11-24 23:46:39,132 - linkedin_publisher_service.py - Line: 218 - INFO - Attempting to post document for user JqmOgR5UUi
+2024-11-24 23:46:39,327 - linkedin_publisher_service.py - Line: 299 - ERROR - Request error during document post for user JqmOgR5UUi: 403 Client Error: Forbidden for url: https://api.linkedin.com/v2/assets?action=registerUpload
+2024-11-24 23:46:39,327 - linkedin_test.py - Line: 70 - ERROR - An error occurred: Failed to post document on LinkedIn: 403 Client Error: Forbidden for url: https://api.linkedin.com/v2/assets?action=registerUpload
+2024-11-25 19:32:50,509 - linkedin_oauth_helper.py - Line: 19 - INFO - LinkedInOAuthHelper initialized
+2024-11-25 19:32:50,522 - linkedin_test.py - Line: 29 - INFO - Step 1: Authenticating user...
+2024-11-25 19:32:50,523 - linkedin_oauth_helper.py - Line: 114 - INFO - Step 1: Generating authorization URL
+2024-11-25 19:32:50,524 - linkedin_oauth_helper.py - Line: 25 - INFO - Authorization URL: https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=86wvn8r9qqrpwx&redirect_uri=https://www.reddit.com/&scope=w_member_social%20profile%20email%20openid
+2024-11-25 19:33:17,135 - linkedin_oauth_helper.py - Line: 122 - INFO - Step 2: Exchanging code for token
+2024-11-25 19:33:17,135 - linkedin_oauth_helper.py - Line: 38 - INFO - Exchanging authorization code for token
+2024-11-25 19:33:17,808 - linkedin_oauth_helper.py - Line: 44 - INFO - Token exchange successful
+2024-11-25 19:33:18,553 - linkedin_oauth_helper.py - Line: 51 - INFO - Token saved for user YOUR_TEST_USER_ID
+2024-11-25 19:33:18,553 - linkedin_oauth_helper.py - Line: 127 - INFO - Authentication flow completed for user: YOUR_TEST_USER_ID
+2024-11-25 19:33:18,583 - linkedin_test.py - Line: 36 - INFO - Step 2: Testing text post...
+2024-11-25 19:33:18,735 - linkedin_oauth_helper.py - Line: 58 - INFO - Retrieved token for user YOUR_TEST_USER_ID
+2024-11-25 19:33:19,037 - linkedin_oauth_helper.py - Line: 100 - INFO - User URN: JqmOgR5UUi
+2024-11-25 19:33:19,039 - linkedin_publisher_service.py - Line: 32 - INFO - Attempting to post text for user JqmOgR5UUi
+2024-11-25 19:33:19,465 - linkedin_publisher_service.py - Line: 53 - INFO - Text post successful for user JqmOgR5UUi
+2024-11-25 19:33:19,466 - linkedin_test.py - Line: 38 - INFO - Text Post Response: {'id': 'urn:li:share:7267017557402877954'}
+2024-11-25 19:33:19,475 - linkedin_test.py - Line: 45 - INFO - Step 3: Testing image post...
+2024-11-25 19:33:19,617 - linkedin_oauth_helper.py - Line: 58 - INFO - Retrieved token for user YOUR_TEST_USER_ID
+2024-11-25 19:33:20,044 - linkedin_oauth_helper.py - Line: 100 - INFO - User URN: JqmOgR5UUi
+2024-11-25 19:33:20,045 - linkedin_publisher_service.py - Line: 67 - INFO - Attempting to post image for user JqmOgR5UUi
+2024-11-25 19:33:20,833 - linkedin_publisher_service.py - Line: 97 - INFO - Image uploaded successfully for user JqmOgR5UUi
+2024-11-25 19:33:21,351 - linkedin_publisher_service.py - Line: 116 - INFO - Image post successful for user JqmOgR5UUi
+2024-11-25 19:33:21,352 - linkedin_test.py - Line: 47 - INFO - Image Post Response: {'id': 'urn:li:share:7267017564831047680'}
+2024-11-25 19:33:21,354 - linkedin_test.py - Line: 54 - INFO - Step 4: Testing video post...
+2024-11-25 19:33:21,485 - linkedin_oauth_helper.py - Line: 58 - INFO - Retrieved token for user YOUR_TEST_USER_ID
+2024-11-25 19:33:21,986 - linkedin_oauth_helper.py - Line: 100 - INFO - User URN: JqmOgR5UUi
+2024-11-25 19:33:21,988 - linkedin_publisher_service.py - Line: 133 - INFO - Attempting to post video for user JqmOgR5UUi
+2024-11-25 19:33:26,295 - linkedin_publisher_service.py - Line: 171 - INFO - Video upload successful for asset: urn:li:digitalmediaAsset:D5605AQHRlY9lqsJQmA
+2024-11-25 19:33:26,729 - linkedin_publisher_service.py - Line: 197 - INFO - Video post published successfully for user JqmOgR5UUi
+2024-11-25 19:33:26,730 - linkedin_test.py - Line: 56 - INFO - Video Post Response: {'id': 'urn:li:ugcPost:7267017587580895232'}
+2024-11-25 19:40:48,982 - linkedin_oauth_helper.py - Line: 19 - INFO - LinkedInOAuthHelper initialized
+2024-11-25 19:40:49,013 - linkedin_test.py - Line: 29 - INFO - Step 1: Authenticating user...
+2024-11-25 19:40:49,013 - linkedin_oauth_helper.py - Line: 114 - INFO - Step 1: Generating authorization URL
+2024-11-25 19:40:49,014 - linkedin_oauth_helper.py - Line: 25 - INFO - Authorization URL: https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=86wvn8r9qqrpwx&redirect_uri=https://www.reddit.com/&scope=w_member_social%20profile%20email%20openid
+2024-11-25 19:41:09,117 - linkedin_oauth_helper.py - Line: 122 - INFO - Step 2: Exchanging code for token
+2024-11-25 19:41:09,120 - linkedin_oauth_helper.py - Line: 38 - INFO - Exchanging authorization code for token
+2024-11-25 19:41:10,180 - linkedin_oauth_helper.py - Line: 44 - INFO - Token exchange successful
+2024-11-25 19:41:10,789 - linkedin_oauth_helper.py - Line: 51 - INFO - Token saved for user YOUR_TEST_USER_ID
+2024-11-25 19:41:10,790 - linkedin_oauth_helper.py - Line: 127 - INFO - Authentication flow completed for user: YOUR_TEST_USER_ID
+2024-11-25 19:41:11,500 - linkedin_test.py - Line: 36 - INFO - Step 2: Testing text post...
+2024-11-25 19:41:11,598 - linkedin_oauth_helper.py - Line: 58 - INFO - Retrieved token for user YOUR_TEST_USER_ID
+2024-11-25 19:41:12,013 - linkedin_oauth_helper.py - Line: 100 - INFO - User URN: JqmOgR5UUi
+2024-11-25 19:41:12,014 - linkedin_publisher_service.py - Line: 32 - INFO - Attempting to post text for user JqmOgR5UUi
+2024-11-25 19:41:12,436 - linkedin_publisher_service.py - Line: 59 - ERROR - Request failed during text post for user JqmOgR5UUi: 422 Client Error: Unprocessable Entity for url: https://api.linkedin.com/v2/ugcPosts
+2024-11-25 19:41:12,438 - linkedin_test.py - Line: 70 - ERROR - An error occurred: Failed to post text on LinkedIn: 422 Client Error: Unprocessable Entity for url: https://api.linkedin.com/v2/ugcPosts
+2024-11-25 19:43:01,291 - linkedin_oauth_helper.py - Line: 19 - INFO - LinkedInOAuthHelper initialized
+2024-11-25 19:43:01,292 - linkedin_test.py - Line: 29 - INFO - Step 1: Authenticating user...
+2024-11-25 19:43:01,292 - linkedin_oauth_helper.py - Line: 114 - INFO - Step 1: Generating authorization URL
+2024-11-25 19:43:01,292 - linkedin_oauth_helper.py - Line: 25 - INFO - Authorization URL: https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=86wvn8r9qqrpwx&redirect_uri=https://www.reddit.com/&scope=w_member_social%20profile%20email%20openid
+2024-11-25 19:43:15,644 - linkedin_oauth_helper.py - Line: 122 - INFO - Step 2: Exchanging code for token
+2024-11-25 19:43:15,644 - linkedin_oauth_helper.py - Line: 38 - INFO - Exchanging authorization code for token
+2024-11-25 19:43:16,025 - linkedin_oauth_helper.py - Line: 44 - INFO - Token exchange successful
+2024-11-25 19:43:16,730 - linkedin_oauth_helper.py - Line: 51 - INFO - Token saved for user YOUR_TEST_USER_ID
+2024-11-25 19:43:16,731 - linkedin_oauth_helper.py - Line: 127 - INFO - Authentication flow completed for user: YOUR_TEST_USER_ID
+2024-11-25 19:43:16,733 - linkedin_test.py - Line: 36 - INFO - Step 2: Testing text post...
+2024-11-25 19:43:16,934 - linkedin_oauth_helper.py - Line: 58 - INFO - Retrieved token for user YOUR_TEST_USER_ID
+2024-11-25 19:43:17,241 - linkedin_oauth_helper.py - Line: 100 - INFO - User URN: JqmOgR5UUi
+2024-11-25 19:43:17,243 - linkedin_publisher_service.py - Line: 32 - INFO - Attempting to post text for user JqmOgR5UUi
+2024-11-25 19:43:17,664 - linkedin_publisher_service.py - Line: 59 - ERROR - Request failed during text post for user JqmOgR5UUi: 422 Client Error: Unprocessable Entity for url: https://api.linkedin.com/v2/ugcPosts
+2024-11-25 19:43:17,665 - linkedin_test.py - Line: 70 - ERROR - An error occurred: Failed to post text on LinkedIn: 422 Client Error: Unprocessable Entity for url: https://api.linkedin.com/v2/ugcPosts
+2024-11-25 19:47:14,187 - linkedin_oauth_helper.py - Line: 19 - INFO - LinkedInOAuthHelper initialized
+2024-11-25 19:47:14,189 - linkedin_test.py - Line: 29 - INFO - Step 1: Authenticating user...
+2024-11-25 19:47:14,190 - linkedin_oauth_helper.py - Line: 114 - INFO - Step 1: Generating authorization URL
+2024-11-25 19:47:14,191 - linkedin_oauth_helper.py - Line: 25 - INFO - Authorization URL: https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=86wvn8r9qqrpwx&redirect_uri=https://www.reddit.com/&scope=w_member_social%20profile%20email%20openid
+2024-11-25 19:47:28,611 - linkedin_oauth_helper.py - Line: 122 - INFO - Step 2: Exchanging code for token
+2024-11-25 19:47:28,612 - linkedin_oauth_helper.py - Line: 38 - INFO - Exchanging authorization code for token
+2024-11-25 19:47:29,057 - linkedin_oauth_helper.py - Line: 44 - INFO - Token exchange successful
+2024-11-25 19:47:29,557 - linkedin_oauth_helper.py - Line: 51 - INFO - Token saved for user YOUR_TEST_USER_ID
+2024-11-25 19:47:29,557 - linkedin_oauth_helper.py - Line: 127 - INFO - Authentication flow completed for user: YOUR_TEST_USER_ID
+2024-11-25 19:47:29,558 - linkedin_test.py - Line: 36 - INFO - Step 2: Testing text post...
+2024-11-25 19:47:29,697 - linkedin_oauth_helper.py - Line: 58 - INFO - Retrieved token for user YOUR_TEST_USER_ID
+2024-11-25 19:47:30,086 - linkedin_oauth_helper.py - Line: 100 - INFO - User URN: JqmOgR5UUi
+2024-11-25 19:47:30,087 - linkedin_publisher_service.py - Line: 32 - INFO - Attempting to post text for user JqmOgR5UUi
+2024-11-25 19:47:30,489 - linkedin_publisher_service.py - Line: 59 - ERROR - Request failed during text post for user JqmOgR5UUi: 401 Client Error: Unauthorized for url: https://api.linkedin.com/v2/ugcPosts
+2024-11-25 19:47:30,489 - linkedin_test.py - Line: 70 - ERROR - An error occurred: Failed to post text on LinkedIn: 401 Client Error: Unauthorized for url: https://api.linkedin.com/v2/ugcPosts
+2024-11-25 19:49:37,913 - linkedin_oauth_helper.py - Line: 19 - INFO - LinkedInOAuthHelper initialized
+2024-11-25 19:49:37,914 - linkedin_test.py - Line: 29 - INFO - Step 1: Authenticating user...
+2024-11-25 19:49:37,914 - linkedin_oauth_helper.py - Line: 114 - INFO - Step 1: Generating authorization URL
+2024-11-25 19:49:37,914 - linkedin_oauth_helper.py - Line: 25 - INFO - Authorization URL: https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=86wvn8r9qqrpwx&redirect_uri=https://www.reddit.com/&scope=w_member_social%20profile%20email%20openid
+2024-11-25 19:49:58,127 - linkedin_oauth_helper.py - Line: 122 - INFO - Step 2: Exchanging code for token
+2024-11-25 19:49:58,130 - linkedin_oauth_helper.py - Line: 38 - INFO - Exchanging authorization code for token
+2024-11-25 19:49:58,869 - linkedin_oauth_helper.py - Line: 44 - INFO - Token exchange successful
+2024-11-25 19:49:59,268 - linkedin_oauth_helper.py - Line: 51 - INFO - Token saved for user YOUR_TEST_USER_ID
+2024-11-25 19:49:59,269 - linkedin_oauth_helper.py - Line: 127 - INFO - Authentication flow completed for user: YOUR_TEST_USER_ID
+2024-11-25 19:49:59,272 - linkedin_test.py - Line: 36 - INFO - Step 2: Testing text post...
+2024-11-25 19:49:59,477 - linkedin_oauth_helper.py - Line: 58 - INFO - Retrieved token for user YOUR_TEST_USER_ID
+2024-11-25 19:49:59,890 - linkedin_oauth_helper.py - Line: 100 - INFO - User URN: JqmOgR5UUi
+2024-11-25 19:49:59,892 - linkedin_publisher_service.py - Line: 32 - INFO - Attempting to post text for user JqmOgR5UUi
+2024-11-25 19:50:00,431 - linkedin_publisher_service.py - Line: 53 - INFO - Text post successful for user JqmOgR5UUi
+2024-11-25 19:50:00,433 - linkedin_test.py - Line: 38 - INFO - Text Post Response: {'id': 'urn:li:share:7267021755548913664'}
+2024-11-25 19:50:00,435 - linkedin_test.py - Line: 45 - INFO - Step 3: Testing image post...
+2024-11-25 19:50:00,541 - linkedin_oauth_helper.py - Line: 58 - INFO - Retrieved token for user YOUR_TEST_USER_ID
+2024-11-25 19:50:00,885 - linkedin_oauth_helper.py - Line: 100 - INFO - User URN: JqmOgR5UUi
+2024-11-25 19:50:00,886 - linkedin_publisher_service.py - Line: 67 - INFO - Attempting to post image for user JqmOgR5UUi
+2024-11-25 19:50:01,741 - linkedin_publisher_service.py - Line: 97 - INFO - Image uploaded successfully for user JqmOgR5UUi
+2024-11-25 19:50:02,550 - linkedin_publisher_service.py - Line: 116 - INFO - Image post successful for user JqmOgR5UUi
+2024-11-25 19:50:02,551 - linkedin_test.py - Line: 47 - INFO - Image Post Response: {'id': 'urn:li:share:7267021763392229378'}
+2024-11-25 19:50:02,552 - linkedin_test.py - Line: 54 - INFO - Step 4: Testing video post...
+2024-11-25 19:50:02,664 - linkedin_oauth_helper.py - Line: 58 - INFO - Retrieved token for user YOUR_TEST_USER_ID
+2024-11-25 19:50:03,165 - linkedin_oauth_helper.py - Line: 100 - INFO - User URN: JqmOgR5UUi
+2024-11-25 19:50:03,166 - linkedin_publisher_service.py - Line: 133 - INFO - Attempting to post video for user JqmOgR5UUi
+2024-11-25 19:50:06,035 - linkedin_publisher_service.py - Line: 171 - INFO - Video upload successful for asset: urn:li:digitalmediaAsset:D4D05AQHcBKSfWLD5Xw
+2024-11-25 19:50:06,648 - linkedin_publisher_service.py - Line: 197 - INFO - Video post published successfully for user JqmOgR5UUi
+2024-11-25 19:50:06,650 - linkedin_test.py - Line: 56 - INFO - Video Post Response: {'id': 'urn:li:ugcPost:7267021780886695937'}
