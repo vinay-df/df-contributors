@@ -1131,3 +1131,5 @@
 2024-11-25 19:50:06,035 - linkedin_publisher_service.py - Line: 171 - INFO - Video upload successful for asset: urn:li:digitalmediaAsset:D4D05AQHcBKSfWLD5Xw
 2024-11-25 19:50:06,648 - linkedin_publisher_service.py - Line: 197 - INFO - Video post published successfully for user JqmOgR5UUi
 2024-11-25 19:50:06,650 - linkedin_test.py - Line: 56 - INFO - Video Post Response: {'id': 'urn:li:ugcPost:7267021780886695937'}
+2024-11-30 13:24:24,099 - facebook_test.py - Line: 23 - INFO - Initializing Facebook OAuth Helper...
+2024-11-30 13:24:24,111 - facebook_test.py - Line: 71 - ERROR - An error occurred during Facebook connector testing: __init__() missing 5 required positional arguments: 'client_id', 'client_secret', 'auth_url', 'token_url', and 'scope'
