@@ -35,10 +35,10 @@ def test_facebook_connector():
         publisher_service = FacebookPublisherService(oauth_helper)
 
         # Step 4: Test posting text
-        logger.info("Testing text post...")
-        text_post_content = "This is a test text post from my Facebook integration!"
-        response = publisher_service.post_text(TEST_USER_ID, text_post_content)
-        logger.info(f"Text Post Response: {response}")
+        # logger.info("Testing text post...")
+        # text_post_content = "This is a test text post from my Facebook integration!"
+        # response = publisher_service.post_text(TEST_USER_ID, text_post_content)
+        # logger.info(f"Text Post Response: {response}")
 
         # # Step 5: Test posting an image (optional)
         # image_path = 'E:/Projects/Decafluence/decafluence/decafluence_social_package/OfficialMeetLogo.jpg'  # Provide a valid image path
@@ -66,6 +66,19 @@ def test_facebook_connector():
         # link_post_content = "Check out this link shared via the Facebook API!"
         # response = publisher_service.post_link(TEST_USER_ID, link_post_content, test_link_url)
         # logger.info(f"Link Post Response: {response}")
+
+    #     # Test Step 8: Test posting a document
+    #     document_path = "E:/Projects/Decafluence/decafluence/decafluence_social_package/Question bank Answers for NLP.pdf"
+    #     if os.path.exists(document_path):
+    #         logger.info("Testing document post...")
+    #         document_post_content = "This is a test post with a document!"
+    #         try:
+    #             response = publisher_service.post_document(TEST_USER_ID, document_post_content, document_path)
+    #             logger.info(f"Document Post Response: {response}")
+    #         except Exception as e:
+    #             logger.error(f"Error posting document: {e}")
+    #     else:
+    #         logger.warning(f"Document file not found at path: {document_path}. Skipping document post test.")
 
     except Exception as e:
         logger.error(f"An error occurred during Facebook connector testing: {e}")

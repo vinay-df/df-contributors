@@ -1,145 +1,110 @@
+import logging
 import requests
-from firebase_admin import firestore
+from firebase_config import firestore_client
 from decafluence.oauth_helpers.base_oauth import BaseOAuthHelper
-from logger_config import setup_logger  # Assuming your setup_logger function is here
+
+# Set up the logger
+logger = logging.getLogger("app_logger")
 
 
 class FacebookOAuthHelper(BaseOAuthHelper):
     def __init__(self):
-        super().__init__()
-        self.client_id = None
-        self.client_secret = None
-        self.redirect_uri = None
+        self.client_id = 'YOUR_FACEBOOK_CLIENT_ID'
+        self.client_secret = 'YOUR_FACEBOOK_CLIENT_SECRET'
+        self.redirect_uri = 'YOUR_REDIRECT_URI'
+        self.scopes = 'public_profile,email,pages_manage_posts,pages_read_engagement'
         self.auth_url = 'https://www.facebook.com/v11.0/dialog/oauth'
         self.token_url = 'https://graph.facebook.com/v11.0/oauth/access_token'
-        self.debug_token_url = 'https://graph.facebook.com/debug_token'
-        self.firestore_client = firestore.client()
-        self.logger = setup_logger()
+        self.pages_url = 'https://graph.facebook.com/v11.0/me/accounts'
+        self.firestore_client = firestore_client
+        logger.info("FacebookOAuthHelper initialized")
 
-    def set_credentials(self, client_id, client_secret, redirect_uri):
-        """
-        Sets the client credentials dynamically.
-        """
-        self.client_id = client_id
-        self.client_secret = client_secret
-        self.redirect_uri = redirect_uri
-        self.logger.info("Facebook OAuth credentials have been set.")
-
-    def get_authorization_url(self, state=None):
-        """
-        Generates the Facebook authorization URL.
-        """
-        if not all([self.client_id, self.redirect_uri]):
-            raise ValueError("Client ID and Redirect URI must be set before generating the authorization URL.")
-
-        params = {
-            "client_id": self.client_id,
-            "redirect_uri": self.redirect_uri,
-            "scope": "public_profile,email,pages_manage_posts,pages_read_engagement",
-        }
-
-        if state:
-            params["state"] = state
-
-        auth_url = requests.Request('GET', self.auth_url, params=params).prepare().url
-        self.logger.info(f"Generated Facebook authorization URL: {auth_url}")
+    def get_authorization_url(self, redirect_uri=None):
+        """Generate the Facebook authorization URL."""
+        redirect_uri = redirect_uri or self.redirect_uri
+        auth_url = (
+            f"{self.auth_url}?client_id={self.client_id}"
+            f"&redirect_uri={redirect_uri}"
+            f"&scope={self.scopes}&response_type=code"
+        )
+        logger.info(f"Authorization URL: {auth_url}")
         return auth_url
 
-    def exchange_code_for_token(self, authorization_code):
-        """
-        Exchanges the authorization code for an access token.
-        """
-        if not all([self.client_id, self.client_secret, self.redirect_uri]):
-            raise ValueError("Client credentials must be set before exchanging the authorization code.")
-
-        data = {
-            "client_id": self.client_id,
-            "redirect_uri": self.redirect_uri,
-            "client_secret": self.client_secret,
-            "code": authorization_code,
+    def exchange_code_for_token(self, authorization_code, redirect_uri=None):
+        """Exchange the authorization code for an access token."""
+        redirect_uri = redirect_uri or self.redirect_uri
+        params = {
+            'client_id': self.client_id,
+            'redirect_uri': redirect_uri,
+            'client_secret': self.client_secret,
+            'code': authorization_code,
         }
-
-        self.logger.info("Exchanging authorization code for access token...")
-        response = requests.get(self.token_url, params=data)
+        response = requests.get(self.token_url, params=params)
         response.raise_for_status()
         token_data = response.json()
-        self.logger.info(f"Token exchange successful: {token_data}")
+        logger.info("Token exchange successful")
         return token_data
 
-    def save_token(self, user_id, token_data):
-        """
-        Saves the token data in Firestore under the given user ID.
-        """
-        if not user_id or not token_data:
-            raise ValueError("User ID and token data are required to save the token.")
+    def fetch_user_pages(self, access_token):
+        """Fetch the list of Pages the user manages."""
+        params = {"access_token": access_token}
+        response = requests.get(self.pages_url, params=params)
+        response.raise_for_status()
+        pages_data = response.json()
+        return pages_data.get('data', [])
 
-        user_tokens_ref = self.firestore_client.collection('user_tokens')
-        user_tokens_ref.document(user_id).set(token_data)
-        self.logger.info(f"Token data saved for user ID: {user_id}")
-
-    def get_token(self, user_id):
-        """
-        Retrieves the token data for the specified user ID from Firestore.
-        """
-        if not user_id:
-            raise ValueError("User ID is required to retrieve the token.")
-
-        user_tokens_ref = self.firestore_client.collection('user_tokens')
-        token_doc = user_tokens_ref.document(user_id).get()
-        if token_doc.exists:
-            self.logger.info(f"Token data retrieved for user ID: {user_id}")
-            return token_doc.to_dict()
-        else:
-            self.logger.warning(f"No token data found for user ID: {user_id}")
-            return None
-
-    def validate_token(self, user_id):
-        """
-        Validates the access token by calling Facebook's token debugging endpoint.
-        """
-        token_data = self.get_token(user_id)
-        if not token_data or "access_token" not in token_data:
-            self.logger.warning(f"No valid access token found for user ID: {user_id}")
-            return False
-
-        access_token = token_data["access_token"]
-        params = {
-            "input_token": access_token,
-            "access_token": f"{self.client_id}|{self.client_secret}",
-        }
-
-        self.logger.info("Validating access token with Facebook...")
-        response = requests.get(self.debug_token_url, params=params)
-        if response.status_code == 200:
-            self.logger.info("Access token validation successful.")
-            return True
-        else:
-            self.logger.warning(f"Access token validation failed: {response.text}")
-            return False
+    def save_token_and_pages(self, user_id, token_data, pages):
+        """Save user tokens and Page details to Firestore."""
+        user_ref = self.firestore_client.collection('user_tokens').document(user_id)
+        user_ref.set({"token_data": token_data, "pages": pages})
+        logger.info(f"Tokens and pages saved for user {user_id}")
 
     def refresh_token(self, user_id):
         """
-        Facebook tokens do not support refreshing, so reuse the existing token.
+        Refresh the user's token using saved refresh token data.
         """
-        token_data = self.get_token(user_id)
-        if not token_data or "access_token" not in token_data:
-            raise ValueError("No valid access token found for the user.")
-        self.logger.info("Returning existing access token as Facebook does not use refresh tokens.")
-        return token_data["access_token"]
+        user_ref = self.firestore_client.collection('user_tokens').document(user_id)
+        user_data = user_ref.get().to_dict()
+        if not user_data:
+            raise ValueError(f"No token data found for user {user_id}")
 
-    def complete_authentication_flow(self, user_id, authorization_code):
+        token_data = user_data.get("token_data", {})
+        access_token = token_data.get("access_token")
+        if not access_token:
+            raise ValueError(f"No access token found for user {user_id}")
+
+        logger.info(f"Token refreshed for user {user_id}")
+        return access_token
+
+    def save_token(self, user_id, token_data):
         """
-        Completes the entire authentication flow:
-        1. Exchanges the authorization code for a token.
-        2. Saves the token data in Firestore under the given user ID.
-        3. Validates the token.
+        Save the token data for the user.
         """
-        self.logger.info("Completing authentication flow...")
-        token_data = self.exchange_code_for_token(authorization_code)
-        self.save_token(user_id, token_data)
-        is_valid = self.validate_token(user_id)
-        if is_valid:
-            self.logger.info(f"Authentication flow completed successfully for user ID: {user_id}")
-        else:
-            self.logger.error(f"Token validation failed for user ID: {user_id}")
-        return is_valid
+        user_ref = self.firestore_client.collection('user_tokens').document(user_id)
+        user_ref.set({"token_data": token_data}, merge=True)
+        logger.info(f"Token saved for user {user_id}")
+
+    def complete_authentication_flow(self, user_id):
+        """Complete the authentication flow and save tokens and Pages."""
+        try:
+            # Step 1: Generate authorization URL
+            auth_url = self.get_authorization_url()
+            print(f"Please go to this URL and authorize the application:\n{auth_url}")
+
+            # Step 2: Get authorization code
+            authorization_code = input("Enter the authorization code from Facebook: ")
+
+            # Step 3: Exchange code for token
+            token_data = self.exchange_code_for_token(authorization_code)
+
+            # Step 4: Fetch Pages the user manages
+            access_token = token_data['access_token']
+            pages = self.fetch_user_pages(access_token)
+
+            # Step 5: Save tokens and Pages
+            self.save_token_and_pages(user_id, token_data, pages)
+
+            logger.info(f"Authentication flow completed successfully for user {user_id}")
+        except Exception as e:
+            logger.error(f"Error during authentication flow: {e}")
+            raise
