@@ -1,3 +1,4 @@
+import os
 import requests
 import logging
 from decafluence.oauth_helpers.linkedin_oauth_helper import LinkedInOAuthHelper
@@ -207,96 +208,115 @@ class LinkedInPublisherService(BasePublisherService):
             self.logger.error(f"Unexpected error during video post: {e}")
             raise
 
-    def post_document(self, user_id, content, document_path):
-        """Post a document to LinkedIn."""
+    def post_document(self, user_id, commentary, document_path):
+        """Posts a document on LinkedIn.
+
+        Args:
+            user_id (str): The user's LinkedIn ID.
+            commentary (str): The text to accompany the document.
+            document_path (str): The path to the document to be uploaded.
+
+        Returns:
+            dict: The JSON response from the LinkedIn API.
+
+        Raises:
+            ValueError: If access token or user URN is not found.
+            requests.exceptions.RequestException: If a request to the LinkedIn API fails.
+            Exception: If an unexpected error occurs.
+        """
         try:
-            # Step 1: Retrieve Access Token and User URN
+            # Step 1: Retrieve Access Token
             access_token = self.oauth_helper.get_token(user_id).get('access_token')
             if not access_token:
-                raise ValueError("Access token not found")
+                raise ValueError("Access token not found.")
+            self.logger.info(f"Access token retrieved for user {user_id}")
+
             user_urn = self.oauth_helper.get_user_urn(access_token)
+            if not user_urn:
+                raise ValueError("User URN not found.")
             self.logger.info(f"Attempting to post document for user {user_urn}")
+
+            # Headers for LinkedIn API requests
+            headers = {
+                'Authorization': f'Bearer {access_token}',
+                'LinkedIn-Version': '202307',  # Update this as per the latest version
+                'X-Restli-Protocol-Version': '2.0.0',
+                'Content-Type': 'application/json'
+            }
 
             # Step 2: Validate Inputs
             self.validator.validate_document(document_path)
-            self.validator.validate_text(content)
+            self.validator.validate_text(commentary)
 
-            headers = {'Authorization': f'Bearer {access_token}', 'Content-Type': 'application/json'}
-
-            # Step 3: Register the Document for Upload
-            register_data = {
-                "registerUploadRequest": {
-                    "owner": f"urn:li:person:{user_urn}",
-                    "recipes": ["urn:li:digitalmediaRecipe:feedshare-document"],
-                    "serviceRelationships": [
-                        {"identifier": "urn:li:userGeneratedContent", "relationshipType": "OWNER"}
-                    ]
+            # Step 3: Initialize Document Upload
+            document_name = os.path.basename(document_path)
+            initialize_upload_body = {
+                "initializeUploadRequest": {
+                    "owner": f"urn:li:person:{user_urn}"
                 }
             }
-            register_response = requests.post(
-                f"{self.api_url}assets?action=registerUpload",
-                headers=headers,
-                json=register_data
+            initialize_response = requests.post(
+                f"https://api.linkedin.com/rest/documents?action=initializeUpload",
+                headers=headers, json=initialize_upload_body
             )
-            register_response.raise_for_status()
-            register_result = register_response.json()
+            initialize_response.raise_for_status()
+            initialize_result = initialize_response.json()
 
-            # Extract Upload URL and Asset ID
-            upload_url = register_result['value']['uploadMechanism']['com.linkedin.digitalmedia.uploading.MediaUploadHttpRequest']['uploadUrl']
-            asset = register_result['value']['asset']
-
-            self.logger.info(f"Document registered successfully. Asset: {asset}, Upload URL: {upload_url}")
+            # Extract Upload URL and Document ID
+            upload_url = initialize_result["value"]["uploadUrl"]
+            document_id = initialize_result["value"]["document"]
+            
+            self.logger.info(f"Document initialized for upload. Document ID: {document_id}, Upload URL: {upload_url}")
 
             # Step 4: Upload the Document
             with open(document_path, 'rb') as document_file:
-                upload_headers = {
-                    'Authorization': headers['Authorization'],
-                    'Content-Type': 'application/pdf'
-                }
+                upload_headers = {'Authorization': f'Bearer {access_token}'}
                 upload_response = requests.put(upload_url, headers=upload_headers, data=document_file)
                 upload_response.raise_for_status()
 
-            if upload_response.status_code not in [200, 201]:
-                self.logger.error(f"Document upload failed. Status: {upload_response.status_code}, Response: {upload_response.text}")
-                raise Exception("Document upload failed")
+            self.logger.info(f"Document uploaded successfully. Document ID: {document_id}")
 
-            self.logger.info(f"Document uploaded successfully. Asset: {asset}")
-
-            # Step 5: Publish the Post with the Document
-            post_data = {
+            # Step 5: Create the Post with Uploaded Document
+            post_body = {
                 "author": f"urn:li:person:{user_urn}",
-                "lifecycleState": "PUBLISHED",
-                "specificContent": {
-                    "com.linkedin.ugc.ShareContent": {
-                        "shareCommentary": {"text": content},
-                        "shareMediaCategory": "DOCUMENT",
-                        "media": [
-                            {
-                                "status": "READY",
-                                "description": {"text": "Document shared on LinkedIn"},
-                                "media": asset,
-                                "title": {"text": "Uploaded Document"}
-                            }
-                        ]
+                "commentary": commentary,
+                "visibility": "PUBLIC",
+                "distribution": {
+                    "feedDistribution": "MAIN_FEED",
+                    "targetEntities": [],
+                    "thirdPartyDistributionChannels": []
+                },
+                "content": {
+                    "media": {
+                        "title": document_name,
+                        "id": document_id
                     }
                 },
-                "visibility": {"com.linkedin.ugc.MemberNetworkVisibility": "PUBLIC"}
+                "lifecycleState": "PUBLISHED",
+                "isReshareDisabledByAuthor": False
             }
             post_response = requests.post(
-                f"{self.api_url}ugcPosts",
-                headers=headers,
-                json=post_data
+                f"https://api.linkedin.com/rest/posts",
+                headers=headers, json=post_body
             )
-            post_response.raise_for_status()
+            # Log status and response for debugging
+            self.logger.info(f"Post response status: {post_response.status_code}")
+            self.logger.info(f"Post response body: {post_response.text}")
 
-            self.logger.info(f"Document post published successfully for user {user_urn}")
-            return post_response.json()
+            if post_response.status_code == 201:
+                post_id = post_response.headers.get('x-restli-id')
+                if post_id:
+                    self.logger.info(f"Document post created successfully. Post ID: {post_id}")
+                    return {"post_id": post_id}
+                else:
+                    self.logger.error("Post ID not found in response headers.")
+                    raise Exception("Post creation failed: Post ID missing in response headers.")
+            else:
+                self.logger.error(f"Failed to create post. Response: {post_response.text}")
+                raise Exception(f"Error in creating post: {post_response.text}")
 
-        except ContentValidationError as e:
-            self.logger.error(f"Content validation failed for document post: {e}")
-            raise e
         except requests.exceptions.RequestException as e:
-            self.logger.error(f"Request error during document post for user {user_urn}: {e}")
+            self.logger.error(f"Request error during document post: {e}")
             raise Exception(f"Failed to post document on LinkedIn: {e}")
         except Exception as e:
             self.logger.error(f"Unexpected error during document post: {e}")
